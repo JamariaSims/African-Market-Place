@@ -127,7 +127,7 @@ table {
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 
 /* Color Variables */
-$clr-primary: #d50000;
+$clr-primary: #556f44;
 $clr-primary-hover: #29e6a7;
 $clr-primary-dark: #039d69;
 $clr-gray100: #f9fbff;
@@ -162,6 +162,7 @@ body {
   justify-content: center;
 }
 
+// Card Styling //
 .card {
   overflow: hidden;
   box-shadow: 0 2px 20px $clr-gray300;
@@ -171,4 +172,45 @@ body {
   justify-content: space-between;
   cursor: pointer;
   transition: transform 200ms ease-in;
+
+  // Image Sizing Styling //
+  .cardImage {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  // Item Title Styling //
+  .cardTitle {
+    padding: 1rem;
+    font-family: inherit;
+  }
+
+  // Item Info Styling //
+  .cardDescription {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+
+  // Card Button Styling //
+  .cardButton {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid $clr-primary;
+    background: transparent;
+    color: $clr-primary;
+    border-radius: $radius;
+    transition: background 200ms ease-in, color 200ms ease-in;
+  }
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &:hover .cardButton {
+    background: $clr-primary;
+    color: white;
+  }
 }

@@ -1,14 +1,40 @@
 import "./Card.scss";
 import React from "react";
 import ReactDOM from "react-dom";
-import eggs from "../src/assets/eggs.jpg";
 
 function App() {
   return (
     <div className="wrapper">
-      <Card img={eggs} title="Eggs" description="Local Eggs" />
-      <Card img={eggs} title="Eggs" description="Local Eggs" />
-      <Card img={eggs} title="Eggs" description="Local Eggs" />
+      <Card
+        img={"https://source.unsplash.com/1600x900/?eggs"}
+        title="Eggs"
+        description=""
+      />
+      <Card
+        img={"https://source.unsplash.com/1600x900/?milk,gallon"}
+        title="Milk"
+        description=""
+      />
+      <Card
+        img={"https://source.unsplash.com/1600x900/?fish,ocean"}
+        title="Fish"
+        description=""
+      />
+      <Card
+        img={"https://source.unsplash.com/1600x900/?honey,hive"}
+        title="Honey"
+        description=""
+      />
+      <Card
+        img={"https://source.unsplash.com/1600x900/?meat,filet"}
+        title="Meat"
+        description=""
+      />
+      <Card
+        img={"https://source.unsplash.com/1600x900/?poultry"}
+        title="Poultry"
+        description=""
+      />
     </div>
   );
 }
@@ -21,7 +47,7 @@ function Card(props) {
         <h2 className="cardTitle">{props.title}</h2>
         <p className="cardDescription">{props.description}</p>
       </div>
-      <button className="cardButton">Add To Cart</button>
+      <button className="cardButton">View Products</button>
     </div>
   );
 }
