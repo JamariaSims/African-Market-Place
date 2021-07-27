@@ -1,7 +1,7 @@
 import "./App.css";
-import AuthLogin from "./components/authLogin";
 import firebase from "firebase/app";
-import { Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./views/home";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -19,8 +19,9 @@ firebase.initializeApp(firebaseConfig);
 function App() {
 	return (
 		<Router>
-      <Route></Route>
-				<AuthLogin />
+			<Route exact path="/">
+				<Home />
+			</Route>
 		</Router>
 	);
 }
