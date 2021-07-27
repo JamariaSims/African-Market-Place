@@ -31,7 +31,7 @@ function AuthLogin(props) {
 		});
 	}, [action]);
 	return action === "signedIn" ? null : (
-		<div id="form">
+		<div id="form" className="hide">
 			<div className="authForm">
 				<form>
 					<h5 className="card-title">Sauti's Market Place</h5>
