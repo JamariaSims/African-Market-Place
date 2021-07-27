@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./Card.scss";
 import React from "react";
 import ReactDOM from "react-dom";
 import eggs from "../src/assets/eggs.jpg";
@@ -17,7 +17,7 @@ function Card(props) {
   return (
     <div className="card">
       <div className="cardBody">
-        <img src={props.img} class="cardImage" />
+        <img src={props.img} class="cardImage" alt="" />
         <h2 className="cardTitle">{props.title}</h2>
         <p className="cardDescription">{props.description}</p>
       </div>
