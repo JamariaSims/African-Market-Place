@@ -2,6 +2,7 @@ import "./App.css";
 import firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./views/home";
+import OwnerView from "./views/OwnerView";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
