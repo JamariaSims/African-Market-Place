@@ -1,7 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { ReactDOM } from "react";
 import "./index.css";
-import "./Card.scss";
 import App from "./App";
 
 ReactDOM.render(

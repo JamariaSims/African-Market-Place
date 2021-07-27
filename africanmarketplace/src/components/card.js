@@ -1,4 +1,3 @@
-import "../src/Card.scss";
 import React from "react";
 
 function Card() {
