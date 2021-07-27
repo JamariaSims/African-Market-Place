@@ -2,6 +2,7 @@ import "./App.css";
 import firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./views/home";
+import Navbar from "./views/navbar";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -19,6 +20,9 @@ firebase.initializeApp(firebaseConfig);
 function App() {
 	return (
 		<Router>
+			<Route path="/">
+				<Navbar />
+			</Route>
 			<Route exact path="/">
 				<Home />
 			</Route>
