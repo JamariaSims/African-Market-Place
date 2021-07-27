@@ -1,5 +1,5 @@
 import "./App.css";
-import Test from "./components/test";
+import AuthLogin from "./components/authLogin";
 import firebase from "firebase/app";
 
 const firebaseConfig = {
@@ -18,7 +18,7 @@ firebase.initializeApp(firebaseConfig);
 function App() {
 	return (
 		<div className="App">
-			<Test />
+			<AuthLogin />
 		</div>
 	);
 }

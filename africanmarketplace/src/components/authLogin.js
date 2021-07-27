@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SignIn } from "../firebase/auth";
-function Test() {
+function AuthLogin() {
 	const [userData, setUserData] = useState({
 		email: "",
 		password: "",
@@ -39,4 +39,4 @@ function Test() {
 	);
 }
 
-export default Test;
+export default AuthLogin;
