@@ -1,4 +1,4 @@
-import "./Card.scss";
+import "../src/Card.scss";
 import React from "react";
 import ReactDOM from "react-dom";
 
