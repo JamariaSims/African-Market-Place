@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Consumer() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return <div></div>;
 }
 
-export default Consumer
+export default Consumer;
