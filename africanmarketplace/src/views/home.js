@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AuthLogin from "../components/authLogin";
 import cart from "../assets/shoppingcart.png";
 import { Link } from "react-router-dom";
+import OwnerView from "./OwnerView";
 
 function Home() {
 	const [action, setAction] = useState("");
@@ -55,6 +56,7 @@ function Home() {
 					</div>
 				</nav>
 			</div>
+			<OwnerView />
 		</>
 	);
 }
