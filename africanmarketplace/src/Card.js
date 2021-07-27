@@ -2,7 +2,7 @@ import "./Card.scss";
 import React from "react";
 import ReactDOM from "react-dom";
 
-function App() {
+function Cards() {
   return (
     <div className="wrapper">
       <Card
@@ -52,6 +52,6 @@ function Card(props) {
   );
 }
 
-export default App;
+export default Cards;
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Cards />, document.getElementById("root"));
