@@ -1,4 +1,4 @@
-import "../src/Card.scss";
+import "../Card.scss";
 import React from "react";
 
 function Cards() {
@@ -32,6 +32,16 @@ function Cards() {
 			<Card
 				img={"https://source.unsplash.com/1600x900/?poultry"}
 				title="Poultry"
+				description=""
+			/>
+			<Card
+				img={"https://source.unsplash.com/1600x900/?vegetables"}
+				title="Vegetables"
+				description=""
+			/>
+			<Card
+				img={"https://source.unsplash.com/1600x900/?fruits"}
+				title="Fruits"
 				description=""
 			/>
 		</div>

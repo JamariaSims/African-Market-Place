@@ -81,6 +81,7 @@ html{
     text-align: center;
     background: #BEE196;
     box-shadow: #74865d 5px 5px 4px 5px;
+    z-index: 15;
 }
 #form{
     position:absolute;
