@@ -67,11 +67,89 @@ td {
 }
 
 /* End Css Reset */
-
+html{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
 .form , form{
     display: flex;
+    position: absolute;
     flex-direction: column;
     margin: 0% auto;
     justify-content: center;
     text-align: center;
+    background: #BEE196;
+    box-shadow: #74865d 5px 5px 4px 5px;
+}
+#form{
+    position:absolute;
+    width: 50%;
+    top: 10%;
+    left: 60%;
+}
+#form form{
+    padding: 5%;
+    width: 80%;
+}
+#form form input{
+    width: 80%;
+    margin: 0% auto;
+}
+.home{
+    background:#BEE196;
+    width: 100%;
+    margin: 0% auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.logout{
+    position: relative;
+    font-size: 70%;
+   text-decoration: none;
+}
+.searchBar{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    margin: 0% auto;
+    margin-top: 2%;
+    padding: 3%;
+    padding-top: 0%;
+    padding-bottom: 2%;
+}
+.searchBar .input{
+    display: flex;
+    height: 10%;
+    padding: 0%;
+}
+.searchBar input{
+    width: 100%;
+    margin-left: 50%;
+}
+.searchBar a{
+    margin: 0%;
+    padding: 0%;
+    width: 20%;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+}
+.cards div{
+background:white;
+border: black solid 1px;
+padding: 0.5% 3% 0.9% 3%;
+border-radius: 5% 5% 0% 0%;
+box-shadow: #74865d 0px 0px 5px 2px;
+}
+.cards div:hover{
+    background: #74865d;
+}
+* .hide{
+    display: none;
 }
