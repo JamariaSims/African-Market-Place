@@ -1,6 +1,7 @@
 import "./App.css";
 import AuthLogin from "./components/authLogin";
 import firebase from "firebase/app";
+import { Router, Route } from "react-router-dom";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -17,9 +18,10 @@ firebase.initializeApp(firebaseConfig);
 
 function App() {
 	return (
-		<div className="App">
-			<AuthLogin />
-		</div>
+		<Router>
+      <Route></Route>
+				<AuthLogin />
+		</Router>
 	);
 }
 
