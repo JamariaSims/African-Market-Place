@@ -2,6 +2,7 @@
 import ProductList from "../components/OwnerViewComponents/ProductList";
 
 import React from "react";
+import addItem from "../components/OwnerViewComponents/ProductList";
 
 function OwnerView() {
 	return (
@@ -20,7 +21,7 @@ function OwnerView() {
 				<h3>Products</h3>
 				<button>Add Product</button>
 			</div>
-			<ProductList />
+			<addItem />
 		</div>
 	);
 }

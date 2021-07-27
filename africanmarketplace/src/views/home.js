@@ -1,4 +1,4 @@
-import Cards from "../components/Card";
+import Cards from "../components/card";
 import React from "react";
 
 function Home() {
