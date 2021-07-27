@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase";
 import { SignIn, SignUp } from "../firebase/auth";
-import { Link } from "react-router-dom";
+
 function AuthLogin(props) {
 	const { action, setAction } = props;
 	const { userData, setUserData } = props;
@@ -28,7 +28,6 @@ function AuthLogin(props) {
 		ref.on("value", (snapshot) => {
 			const data = snapshot.val();
 			setUsers(data);
-			console.log(users);
 		});
 	}, [action]);
 	return action === "signedIn" ? null : (

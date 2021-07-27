@@ -88,6 +88,10 @@ html{
     top: 10%;
     left: 60%;
 }
+#form button{
+width: 50%;
+margin: 0% auto;
+}
 #form form{
     padding: 5%;
     width: 80%;
@@ -104,11 +108,15 @@ html{
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    box-shadow: #74865d 5px 1px 1px 2px;
 }
 .logout{
     position: relative;
     font-size: 70%;
    text-decoration: none;
+}
+.input a:hover{
+width: 35%;
 }
 .searchBar{
     display: flex;
@@ -149,6 +157,10 @@ box-shadow: #74865d 0px 0px 5px 2px;
 }
 .cards div:hover{
     background: #74865d;
+}
+#loginBtn:hover{
+    color:  #74865d;
+    font-size: 150%;
 }
 * .hide{
     display: none;

@@ -1,5 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
 import firebase from "firebase";
-import { Link } from "react-router-dom";
 require("firebase/auth");
 
 //Sign Up
@@ -12,8 +12,9 @@ function SignUp(email, password, userName, setAction) {
 				userName: userName,
 				email: email,
 				password: password,
+				key: uuidv4(),
 			};
-			firebase.database().ref(`users/${userName}${password}`).set(newUser);
+			firebase.database().ref(`${userName}/${newUser.key}`).set(newUser);
 			setAction("SignedIn");
 		})
 		.catch((error) => {

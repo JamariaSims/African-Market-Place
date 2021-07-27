@@ -24,13 +24,14 @@ function Home() {
 			<div className="home">
 				<nav>
 					<div className="searchBar">
-						<h3>Products</h3>
+						<h1>Products</h1>
 						<div className="input">
 							<input type="text" />
 							<Link to="/cart">
 								<img width="35%" src={cart} />
 							</Link>
 							<div
+								id="loginBtn"
 								onClick={() => {
 									document.getElementById("form").classList.toggle("hide");
 								}}
