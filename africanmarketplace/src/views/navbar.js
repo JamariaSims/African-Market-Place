@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AuthLogin from "../components/authLogin";
 import cart from "../assets/shoppingcart.png";
 import { Link } from "react-router-dom";
+import profile from "../assets/profile.png";
 
 function Navbar() {
 	const [action, setAction] = useState("");
@@ -32,23 +33,30 @@ function Navbar() {
 							</Link>
 
 							{action === "SignedIn" ? (
-								<div
-									id="loginBtn"
-									onClick={() => {
-										document.getElementById("form").classList.toggle("hide");
-									}}
-								>
-									{userData.userName}
-								</div>
+								<>
+									<div
+										id="loginBtn"
+										onClick={() => {
+											document.getElementById("form").classList.toggle("hide");
+										}}
+									>
+										{userData.userName}
+									</div>
+									<Link to="/User">
+										<img width="50%" src={profile} />
+									</Link>
+								</>
 							) : (
-								<div
-									id="loginBtn"
-									onClick={() => {
-										document.getElementById("form").classList.toggle("hide");
-									}}
-								>
-									{"Login"}
-								</div>
+								<>
+									<div
+										id="loginBtn"
+										onClick={() => {
+											document.getElementById("form").classList.toggle("hide");
+										}}
+									>
+										{"Login"}
+									</div>
+								</>
 							)}
 						</div>
 					</div>

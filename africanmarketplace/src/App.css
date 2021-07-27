@@ -159,6 +159,19 @@ box-shadow: #74865d 0px 0px 5px 2px;
 .cards div:hover{
     background: #74865d;
 }
+#loginBtn{
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    margin: 0% auto;
+    justify-content: center;
+}
+#loginBtn a{
+margin: 0% auto;
+}
+#loginBtn div{
+margin: 0% auto;
+}
 #loginBtn:hover{
     color:  #74865d;
     font-size: 150%;
