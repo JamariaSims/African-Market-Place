@@ -66,5 +66,12 @@ td {
     vertical-align: middle;
 }
 
-/* End Css Reset *//
+/* End Css Reset */
 
+.form , form{
+    display: flex;
+    flex-direction: column;
+    margin: 0% auto;
+    justify-content: center;
+    text-align: center;
+}
