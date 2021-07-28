@@ -6,47 +6,32 @@ function CerealCards() {
     <div className="wrapper">
       <CerealCard
         img={"https://source.unsplash.com/1600x900/?eggs"}
-        title="Eggs"
+        title="Maize Cereal"
         description=""
       />
       <CerealCard
         img={"https://source.unsplash.com/1600x900/?milk,gallon"}
-        title="Milk"
+        title="Barley Cereal"
         description=""
       />
       <CerealCard
-        img={"https://source.unsplash.com/1600x900/?fish,ocean"}
-        title="Fish"
+        img={"https://source.unsplash.com/1600x900/?milk,gallon"}
+        title="Barley Cereal"
         description=""
       />
       <CerealCard
-        img={"https://source.unsplash.com/1600x900/?honey,hive"}
-        title="Honey"
+        img={"https://source.unsplash.com/1600x900/?milk,gallon"}
+        title="Barley Cereal"
         description=""
       />
       <CerealCard
-        img={"https://source.unsplash.com/1600x900/?meat,steak,lambchop"}
-        title="Meat"
+        img={"https://source.unsplash.com/1600x900/?milk,gallon"}
+        title="Barley Cereal"
         description=""
       />
       <CerealCard
-        img={"https://source.unsplash.com/1600x900/?poultry"}
-        title="Poultry"
-        description=""
-      />
-      <CerealCard
-        img={"https://source.unsplash.com/1600x900/?vegetables"}
-        title="Vegetables"
-        description=""
-      />
-      <CerealCard
-        img={"https://source.unsplash.com/1600x900/?fruits"}
-        title="Fruits"
-        description=""
-      />
-      <CerealCard
-        img={"https://source.unsplash.com/1600x900/?cereal"}
-        title="Cereal"
+        img={"https://source.unsplash.com/1600x900/?milk,gallon"}
+        title="Barley Cereal"
         description=""
       />
     </div>

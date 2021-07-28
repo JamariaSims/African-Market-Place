@@ -5,48 +5,18 @@ function MeatCards() {
   return (
     <div className="wrapper">
       <MeatCard
-        img={"https://source.unsplash.com/1600x900/?eggs"}
-        title="Eggs"
+        img={"https://source.unsplash.com/1600x900/?cow"}
+        title="Beef"
         description=""
       />
       <MeatCard
-        img={"https://source.unsplash.com/1600x900/?milk,gallon"}
-        title="Milk"
+        img={"https://source.unsplash.com/1600x900/?goat"}
+        title="Goat"
         description=""
       />
       <MeatCard
-        img={"https://source.unsplash.com/1600x900/?fish,ocean"}
-        title="Fish"
-        description=""
-      />
-      <MeatCard
-        img={"https://source.unsplash.com/1600x900/?honey,hive"}
-        title="Honey"
-        description=""
-      />
-      <MeatCard
-        img={"https://source.unsplash.com/1600x900/?meat,steak,lambchop"}
-        title="Meat"
-        description=""
-      />
-      <MeatCard
-        img={"https://source.unsplash.com/1600x900/?poultry"}
-        title="Poultry"
-        description=""
-      />
-      <MeatCard
-        img={"https://source.unsplash.com/1600x900/?vegetables"}
-        title="Vegetables"
-        description=""
-      />
-      <MeatCard
-        img={"https://source.unsplash.com/1600x900/?fruits"}
-        title="Fruits"
-        description=""
-      />
-      <MeatCard
-        img={"https://source.unsplash.com/1600x900/?cereal"}
-        title="Cereal"
+        img={"https://source.unsplash.com/1600x900/?pig"}
+        title="Pork"
         description=""
       />
     </div>

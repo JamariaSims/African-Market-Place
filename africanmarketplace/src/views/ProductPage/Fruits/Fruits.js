@@ -5,48 +5,68 @@ function FruitCards() {
   return (
     <div className="wrapper">
       <FruitCard
-        img={"https://source.unsplash.com/1600x900/?eggs"}
-        title="Eggs"
+        img={"https://source.unsplash.com/1600x900/?avacados"}
+        title="Avacado"
         description=""
       />
       <FruitCard
-        img={"https://source.unsplash.com/1600x900/?milk,gallon"}
-        title="Milk"
+        img={"https://source.unsplash.com/1600x900/?bananas"}
+        title="Bananas"
+        description="Apple Bananas"
+      />
+      <FruitCard
+        img={"https://source.unsplash.com/1600x900/?banana"}
+        title="Bananas"
+        description="Cavendish (Bogoya)"
+      />
+      <FruitCard
+        img={"https://source.unsplash.com/1600x900/?banana"}
+        title="Bananas"
+        description="Cooking Bananas"
+      />
+      <FruitCard
+        img={"https://source.unsplash.com/1600x900/?banana"}
+        title="Bananas"
+        description="Ripe Bananas"
+      />
+      <FruitCard
+        img={"https://source.unsplash.com/1600x900/?passionfruit"}
+        title="Passion Fruit"
         description=""
       />
       <FruitCard
-        img={"https://source.unsplash.com/1600x900/?fish,ocean"}
-        title="Fish"
+        img={"https://source.unsplash.com/1600x900/?lemons"}
+        title="Lemons"
         description=""
       />
       <FruitCard
-        img={"https://source.unsplash.com/1600x900/?honey,hive"}
-        title="Honey"
+        img={"https://source.unsplash.com/1600x900/?limes"}
+        title="Limes"
         description=""
       />
       <FruitCard
-        img={"https://source.unsplash.com/1600x900/?meat,steak,lambchop"}
-        title="Meat"
+        img={"https://source.unsplash.com/1600x900/?mango"}
+        title="Mangoes"
+        description="Local Mangoes"
+      />
+      <FruitCard
+        img={"https://source.unsplash.com/1600x900/?mango"}
+        title="Mangoes"
+        description="Mangoes Ngowe"
+      />
+      <FruitCard
+        img={"https://source.unsplash.com/1600x900/?oranges"}
+        title="Oranges"
         description=""
       />
       <FruitCard
-        img={"https://source.unsplash.com/1600x900/?poultry"}
-        title="Poultry"
+        img={"https://source.unsplash.com/1600x900/?pawpaw"}
+        title="Pawpaw"
         description=""
       />
       <FruitCard
-        img={"https://source.unsplash.com/1600x900/?vegetables"}
-        title="Vegetables"
-        description=""
-      />
-      <FruitCard
-        img={"https://source.unsplash.com/1600x900/?fruits"}
-        title="Fruits"
-        description=""
-      />
-      <FruitCard
-        img={"https://source.unsplash.com/1600x900/?cereal"}
-        title="Cereal"
+        img={"https://source.unsplash.com/1600x900/?pineapple"}
+        title="Pineapples"
         description=""
       />
     </div>

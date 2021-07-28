@@ -5,48 +5,13 @@ function FishCards() {
   return (
     <div className="wrapper">
       <FishCard
-        img={"https://source.unsplash.com/1600x900/?eggs"}
-        title="Eggs"
+        img={"https://source.unsplash.com/1600x900/?fish"}
+        title="Nile Perch"
         description=""
       />
       <FishCard
-        img={"https://source.unsplash.com/1600x900/?milk,gallon"}
-        title="Milk"
-        description=""
-      />
-      <FishCard
-        img={"https://source.unsplash.com/1600x900/?fish,ocean"}
-        title="Fish"
-        description=""
-      />
-      <FishCard
-        img={"https://source.unsplash.com/1600x900/?honey,hive"}
-        title="Honey"
-        description=""
-      />
-      <FishCard
-        img={"https://source.unsplash.com/1600x900/?meat,steak,lambchop"}
-        title="Meat"
-        description=""
-      />
-      <FishCard
-        img={"https://source.unsplash.com/1600x900/?poultry"}
-        title="Poultry"
-        description=""
-      />
-      <FishCard
-        img={"https://source.unsplash.com/1600x900/?vegetables"}
-        title="Vegetables"
-        description=""
-      />
-      <FishCard
-        img={"https://source.unsplash.com/1600x900/?fruits"}
-        title="Fruits"
-        description=""
-      />
-      <FishCard
-        img={"https://source.unsplash.com/1600x900/?cereal"}
-        title="Cereal"
+        img={"https://source.unsplash.com/1600x900/?tilapia"}
+        title="Tilapia"
         description=""
       />
     </div>

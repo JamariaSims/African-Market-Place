@@ -1,53 +1,123 @@
-import "../Card.scss";
+import "./Vegetables.scss";
 import React from "react";
 
 function VegetableCards() {
   return (
     <div className="wrapper">
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?eggs"}
-        title="Eggs"
-        description=""
+        img={"https://source.unsplash.com/1600x900/?chips"}
+        title="Root & Tubers"
+        description="Cassava Chips"
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?milk,gallon"}
-        title="Milk"
-        description=""
+        img={"https://source.unsplash.com/1600x900/?flour"}
+        title="Root & Tubers"
+        description="Cassava Flour"
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?fish,ocean"}
-        title="Fish"
-        description=""
+        img={"https://source.unsplash.com/1600x900/?cassava"}
+        title="Root & Tubers"
+        description="Cassava Fresh"
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?honey,hive"}
-        title="Honey"
-        description=""
+        img={"https://source.unsplash.com/1600x900/?cassava"}
+        title="Root & Tubers"
+        description="Dry Fermented Cassava"
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?meat,steak,lambchop"}
-        title="Meat"
-        description=""
+        img={"https://source.unsplash.com/1600x900/?cassava"}
+        title="Root & Tubers"
+        description="Sun Dried Cassava"
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?poultry"}
-        title="Poultry"
-        description=""
+        img={"https://source.unsplash.com/1600x900/?potatoes"}
+        title="Root & Tubers"
+        description="Red Irish Potatoes"
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?vegetables"}
-        title="Vegetables"
-        description=""
+        img={"https://source.unsplash.com/1600x900/?potatoes"}
+        title="Root & Tubers"
+        description="Round Potatoes"
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?fruits"}
-        title="Fruits"
-        description=""
+        img={"https://source.unsplash.com/1600x900/?sweetpotato"}
+        title="Root & Tubers"
+        description="Sweet Potatoes"
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?cereal"}
-        title="Cereal"
-        description=""
+        img={"https://source.unsplash.com/1600x900/?"}
+        title="Root & Tubers"
+        description="White Fleshed Sweet Potatoes"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?potato"}
+        title="Root & Tubers"
+        description="White Irish Potatoes"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?eggplant"}
+        title="Brinjals"
+        description="Brinjal / Eggplant"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?cabbage"}
+        title="Cabbages"
+        description="Cabbage"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?capsicum"}
+        title="Capsicums"
+        description="Capsicum"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?carrot"}
+        title="Carrots"
+        description="Carrot"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?cauliflower"}
+        title="Cauliflowers"
+        description="White Cauliflower"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?chillies"}
+        title="Chillies"
+        description="Chillies"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?cucumber"}
+        title="Cucumbers"
+        description="Cucumber"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?zingiber"}
+        title="Ginger"
+        description="Ginger"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?kale"}
+        title="Kales"
+        description="Kale"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?lettuce"}
+        title="Lettuce"
+        description="Lettuce"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?shallots"}
+        title="Onions"
+        description="Dry Onions"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?schoenoprasum"}
+        title="Onions"
+        description="Spring Onions"
+      />
+      <VegetableCard
+        img={"https://source.unsplash.com/1600x900/?tomatoes"}
+        title="Tomatoes"
+        description="Tomatoes"
       />
     </div>
   );

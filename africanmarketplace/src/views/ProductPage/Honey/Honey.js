@@ -6,47 +6,12 @@ function HoneyCards() {
     <div className="wrapper">
       <HoneyCard
         img={"https://source.unsplash.com/1600x900/?eggs"}
-        title="Eggs"
+        title="Processed Honey"
         description=""
       />
       <HoneyCard
         img={"https://source.unsplash.com/1600x900/?milk,gallon"}
-        title="Milk"
-        description=""
-      />
-      <HoneyCard
-        img={"https://source.unsplash.com/1600x900/?fish,ocean"}
-        title="Fish"
-        description=""
-      />
-      <HoneyCard
-        img={"https://source.unsplash.com/1600x900/?honey,hive"}
-        title="Honey"
-        description=""
-      />
-      <HoneyCard
-        img={"https://source.unsplash.com/1600x900/?meat,steak,lambchop"}
-        title="Meat"
-        description=""
-      />
-      <HoneyCard
-        img={"https://source.unsplash.com/1600x900/?poultry"}
-        title="Poultry"
-        description=""
-      />
-      <HoneyCard
-        img={"https://source.unsplash.com/1600x900/?vegetables"}
-        title="Vegetables"
-        description=""
-      />
-      <HoneyCard
-        img={"https://source.unsplash.com/1600x900/?fruits"}
-        title="Fruits"
-        description=""
-      />
-      <HoneyCard
-        img={"https://source.unsplash.com/1600x900/?cereal"}
-        title="Cereal"
+        title="Unprocessed Honey"
         description=""
       />
     </div>

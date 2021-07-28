@@ -5,6 +5,14 @@ import Home from "./views/HomePage/home";
 import Navbar from "./views/navbar";
 import OwnerView from "./views/OwnerPage/OwnerView";
 import FishCards from "./views/ProductPage/Fish/Fish";
+import CerealCards from "./views/ProductPage/Cereal/Cereal";
+import EggCards from "./views/ProductPage/Eggs/Eggs";
+import FruitCards from "./views/ProductPage/Fruits/Fruits";
+import HoneyCards from "./views/ProductPage/Honey/Honey";
+import MeatCards from "./views/ProductPage/Meat/Meat";
+import MilkCards from "./views/ProductPage/Milk/Milk";
+import PoultryCards from "./views/ProductPage/Poultry/Poultry";
+import VegetableCards from "./views/ProductPage/Vegetables/Vegetables";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -26,6 +34,30 @@ function App() {
         <Navbar />
         <Route path="/fish">
           <FishCards />
+        </Route>
+        <Route path="/cereal">
+          <CerealCards />
+        </Route>
+        <Route path="/eggs">
+          <EggCards />
+        </Route>
+        <Route path="/fruit">
+          <FruitCards />
+        </Route>
+        <Route path="/honey">
+          <HoneyCards />
+        </Route>
+        <Route path="/meat">
+          <MeatCards />
+        </Route>
+        <Route path="/milk">
+          <MilkCards />
+        </Route>
+        <Route path="/poultry">
+          <PoultryCards />
+        </Route>
+        <Route path="/vegetable">
+          <VegetableCards />
         </Route>
       </Route>
       <Route exact path="/">

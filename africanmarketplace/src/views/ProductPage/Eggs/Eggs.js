@@ -1,4 +1,4 @@
-import "../Card.scss";
+import "./Eggs.scss";
 import React from "react";
 
 function EggCards() {
@@ -6,7 +6,17 @@ function EggCards() {
     <div className="wrapper">
       <EggCard
         img={"https://source.unsplash.com/1600x900/?eggs"}
+        title="Eggs"
+        description=""
+      />
+      <EggCard
+        img={"https://source.unsplash.com/1600x900/?eggs"}
         title="Local Eggs"
+        description=""
+      />
+      <EggCard
+        img={"https://source.unsplash.com/1600x900/?eggs"}
+        title="Exotic Eggs"
         description=""
       />
     </div>
