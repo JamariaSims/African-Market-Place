@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase";
-import { SignIn, SignUp } from "../firebase/auth";
+import { SignIn, SignUp } from "./auth";
 
 function AuthLogin(props) {
 	const { action, setAction } = props;
@@ -31,7 +31,7 @@ function AuthLogin(props) {
 		});
 	}, [action]);
 	return action === "signedIn" ? null : (
-		<div id="form" className="hide">
+		<div id="form" className={`MainForm hide`}>
 			<div className="authForm">
 				<form>
 					<h5 className="card-title">Sauti's Market Place</h5>
