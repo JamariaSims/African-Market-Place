@@ -104,7 +104,11 @@ margin: 0% auto;
     flex-direction: column;
     text-align: center;
     justify-content: center;
+
+    box-shadow: #74865d 5px 5px 5px 5px;
+
     box-shadow: #74865d 5px 5px 5px 0px;
+
 }
 .logout{
     position: relative;
