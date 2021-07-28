@@ -5,7 +5,14 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./views/HomePage/home";
 import OwnerView from "./views/OwnerPage/OwnerView";
 import Footer from "./components/footer";
+import { styled } from "@material-ui/core/styles";
 
+const Main = styled("div")({
+	display: "flex",
+	flexDirection: "column",
+	justifyContent: "space-between",
+	height: "100%",
+});
 // Firebase Area //
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -34,14 +41,16 @@ function App() {
 	});
 	return (
 		<Router>
-			<Route path="/"></Route>
-			<Route exact path="/">
-				<Home PageName={Page.PageName} Tabs={Page.Tabs} />
-			</Route>
-			<Route path="/user">
-				<OwnerView />
-			</Route>
-			<Footer />
+			<Main>
+				<Route path="/"></Route>
+				<Route exact path="/">
+					<Home PageName={Page.PageName} Tabs={Page.Tabs} />
+				</Route>
+				<Route path="/user">
+					<OwnerView />
+				</Route>
+				<Footer />
+			</Main>
 		</Router>
 	);
 }

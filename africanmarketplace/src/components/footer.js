@@ -1,41 +1,55 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { styled } from "@material-ui/core/styles";
+import facebook from "../assets/fb.png";
+import google from "../assets/google.png";
+import ig from "../assets/ig.png";
+import twitter from "../assets/twitter.png";
 
-const useStyles = makeStyles((theme) => ({
-	root: {
-		padding: "2px 4px",
-		display: "flex",
-		alignItems: "center",
-		width: "100%",
-		background: "",
-	},
-	input: {
-		marginLeft: theme.spacing(1),
-		flex: 1,
-	},
-	iconButton: {
-		padding: 10,
-	},
-	divider: {
-		height: 28,
-		margin: 4,
-	},
-}));
+const CoolFooter = styled("footer")({
+	width: "100%",
+	margin: "0% auto",
+	display: "flex",
+	position: "relative",
+	flexDirection: "column",
+	padding: "1%",
+	background: "#BEE196",
+});
+const CoolImg = styled("img")({
+	margin: "2%",
+	marginBottom: "0%",
+});
+const CoolA = styled("a")({
+	padding: "1%",
+	paddingTop: "2%",
+	paddingBottom: "0%",
+});
+const CoolDiv1 = styled("div")({
+	display: "flex",
+	justifyContent: "space-around",
+	width: "50%",
+	margin: "0% auto",
+});
+const CoolDiv2 = styled("div")({
+	display: "flex",
+	justifyContent: "center",
+});
+
 export default function Footer() {
-	const classes = useStyles();
 	return (
-		<div component="form" className={classes.root}>
-			<div className="icons">
-				<img src="" />
-				<img src="" />
-				<img src="" />
-				<img src="" />
-			</div>
-			<div className="links">
-				<a href="#">{`Sauti East Africa`}</a>
-				<a href="#">{`Tearms and Conditions`}</a>
-				<a href="#">{`Company Info`}</a>
-			</div>
-		</div>
+		<CoolFooter>
+			<CoolDiv1>
+				<CoolImg width="30px" src={facebook} />
+				<CoolImg width="30px" src={google} />
+				<CoolImg width="30px" src={ig} />
+				<CoolImg width="30px" src={twitter} />
+			</CoolDiv1>
+			<CoolDiv2>
+				<CoolA href="#">{`Sauti East Africa`}</CoolA>
+				<CoolA>|</CoolA>
+				<CoolA href="#">{`Tearms and Conditions`}</CoolA>
+				<CoolA>|</CoolA>
+				<CoolA href="#">{`Company Info`}</CoolA>
+			</CoolDiv2>
+		</CoolFooter>
 	);
 }
