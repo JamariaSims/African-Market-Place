@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./views/HomePage/home";
 import Navbar from "./components/navbar";
 import OwnerView from "./views/OwnerPage/OwnerView";
+import FishCards from "./views/ProductPage/Fish/Fish";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -23,6 +24,9 @@ function App() {
     <Router>
       <Route path="/">
         <Navbar />
+        <Route path="/fish">
+          <FishCards />
+        </Route>
       </Route>
       <Route exact path="/">
         <Home />

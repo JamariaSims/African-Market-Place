@@ -1,50 +1,50 @@
-import "../Card.scss";
+import "./Poultry.scss";
 import React from "react";
 
-function Cards() {
+function PoultryCards() {
   return (
     <div className="wrapper">
-      <Card
+      <PoultryCard
         img={"https://source.unsplash.com/1600x900/?eggs"}
         title="Eggs"
         description=""
       />
-      <Card
+      <PoultryCard
         img={"https://source.unsplash.com/1600x900/?milk,gallon"}
         title="Milk"
         description=""
       />
-      <Card
+      <PoultryCard
         img={"https://source.unsplash.com/1600x900/?fish,ocean"}
         title="Fish"
         description=""
       />
-      <Card
+      <PoultryCard
         img={"https://source.unsplash.com/1600x900/?honey,hive"}
         title="Honey"
         description=""
       />
-      <Card
+      <PoultryCard
         img={"https://source.unsplash.com/1600x900/?meat,steak,lambchop"}
         title="Meat"
         description=""
       />
-      <Card
+      <PoultryCard
         img={"https://source.unsplash.com/1600x900/?poultry"}
         title="Poultry"
         description=""
       />
-      <Card
+      <PoultryCard
         img={"https://source.unsplash.com/1600x900/?vegetables"}
         title="Vegetables"
         description=""
       />
-      <Card
+      <PoultryCard
         img={"https://source.unsplash.com/1600x900/?fruits"}
         title="Fruits"
         description=""
       />
-      <Card
+      <PoultryCard
         img={"https://source.unsplash.com/1600x900/?cereal"}
         title="Cereal"
         description=""
@@ -53,7 +53,7 @@ function Cards() {
   );
 }
 
-function Card(props) {
+function PoultryCard(props) {
   return (
     <div className="card">
       <div className="cardBody">
@@ -66,4 +66,4 @@ function Card(props) {
   );
 }
 
-export default Cards;
+export default PoultryCards;

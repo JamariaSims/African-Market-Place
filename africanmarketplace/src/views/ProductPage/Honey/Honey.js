@@ -1,50 +1,50 @@
-import "../Card.scss";
+import "./Honey.scss";
 import React from "react";
 
-function Cards() {
+function HoneyCards() {
   return (
     <div className="wrapper">
-      <Card
+      <HoneyCard
         img={"https://source.unsplash.com/1600x900/?eggs"}
         title="Eggs"
         description=""
       />
-      <Card
+      <HoneyCard
         img={"https://source.unsplash.com/1600x900/?milk,gallon"}
         title="Milk"
         description=""
       />
-      <Card
+      <HoneyCard
         img={"https://source.unsplash.com/1600x900/?fish,ocean"}
         title="Fish"
         description=""
       />
-      <Card
+      <HoneyCard
         img={"https://source.unsplash.com/1600x900/?honey,hive"}
         title="Honey"
         description=""
       />
-      <Card
+      <HoneyCard
         img={"https://source.unsplash.com/1600x900/?meat,steak,lambchop"}
         title="Meat"
         description=""
       />
-      <Card
+      <HoneyCard
         img={"https://source.unsplash.com/1600x900/?poultry"}
         title="Poultry"
         description=""
       />
-      <Card
+      <HoneyCard
         img={"https://source.unsplash.com/1600x900/?vegetables"}
         title="Vegetables"
         description=""
       />
-      <Card
+      <HoneyCard
         img={"https://source.unsplash.com/1600x900/?fruits"}
         title="Fruits"
         description=""
       />
-      <Card
+      <HoneyCard
         img={"https://source.unsplash.com/1600x900/?cereal"}
         title="Cereal"
         description=""
@@ -53,7 +53,7 @@ function Cards() {
   );
 }
 
-function Card(props) {
+function HoneyCard(props) {
   return (
     <div className="card">
       <div className="cardBody">
@@ -66,4 +66,4 @@ function Card(props) {
   );
 }
 
-export default Cards;
+export default HoneyCards;
