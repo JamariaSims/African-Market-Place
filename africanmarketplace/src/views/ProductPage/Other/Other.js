@@ -1,59 +1,44 @@
-import "./Fruits.scss";
+import "./Other.scss";
 import React from "react";
 
-function FruitCards() {
+function OtherCards() {
   return (
     <div className="wrapper">
-      <FruitCard
+      <OtherCard
         img={"https://source.unsplash.com/1600x900/?avacados"}
-        title="Avacado"
+        title="Coffee (Arabica)"
         description=""
       />
-      <FruitCard
+      <OtherCard
         img={"https://source.unsplash.com/1600x900/?bananas"}
-        title="Bananas"
+        title="Coffee (Robusta)"
         description=""
       />
-      <FruitCard
+      <OtherCard
         img={"https://source.unsplash.com/1600x900/?passionfruit"}
-        title="Passion Fruit"
+        title="Unprocessed Cotton"
         description=""
       />
-      <FruitCard
+      <OtherCard
         img={"https://source.unsplash.com/1600x900/?lemons"}
-        title="Lemons"
+        title="Unprocessed Tea"
         description=""
       />
-      <FruitCard
+      <OtherCard
         img={"https://source.unsplash.com/1600x900/?limes"}
-        title="Limes"
+        title="Tobacco"
         description=""
       />
-      <FruitCard
+      <OtherCard
         img={"https://source.unsplash.com/1600x900/?mango"}
-        title="Mangoes"
-        description=""
-      />
-      <FruitCard
-        img={"https://source.unsplash.com/1600x900/?oranges"}
-        title="Oranges"
-        description=""
-      />
-      <FruitCard
-        img={"https://source.unsplash.com/1600x900/?pawpaw"}
-        title="Pawpaw"
-        description=""
-      />
-      <FruitCard
-        img={"https://source.unsplash.com/1600x900/?pineapple"}
-        title="Pineapples"
+        title="Unprocessed Vanilla"
         description=""
       />
     </div>
   );
 }
 
-function FruitCard(props) {
+function OtherCard(props) {
   return (
     <div className="card">
       <div className="cardBody">
@@ -66,4 +51,4 @@ function FruitCard(props) {
   );
 }
 
-export default FruitCards;
+export default OtherCards;

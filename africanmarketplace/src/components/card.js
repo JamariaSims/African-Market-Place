@@ -7,47 +7,52 @@ function Cards() {
       <Card
         img={"https://source.unsplash.com/1600x900/?eggs"}
         title="Eggs"
-        description=""
+        description="Local & Exotic"
       />
       <Card
         img={"https://source.unsplash.com/1600x900/?milk,gallon"}
         title="Milk"
-        description=""
+        description="Bottled & Carton"
       />
       <Card
         img={"https://source.unsplash.com/1600x900/?fish,ocean"}
         title="Fish"
-        description=""
+        description="Perch & Tilapia"
       />
       <Card
         img={"https://source.unsplash.com/1600x900/?honey,hive"}
         title="Honey"
-        description=""
+        description="Processed & Unprocessed"
       />
       <Card
         img={"https://source.unsplash.com/1600x900/?meat,steak,lambchop"}
         title="Meat"
-        description=""
+        description="Beef, Pork, Goat"
       />
       <Card
         img={"https://source.unsplash.com/1600x900/?poultry"}
         title="Poultry"
-        description=""
+        description="Chicken & Turkey"
       />
       <Card
         img={"https://source.unsplash.com/1600x900/?vegetables"}
         title="Vegetables"
-        description=""
+        description="Root & More"
       />
       <Card
         img={"https://source.unsplash.com/1600x900/?fruits"}
         title="Fruits"
-        description=""
+        description="Bananas, Mangoes & More"
       />
       <Card
         img={"https://source.unsplash.com/1600x900/?grain"}
         title="Grains"
-        description=""
+        description="Rice, Wheat & More"
+      />
+      <Card
+        img={"https://source.unsplash.com/1600x900/?grain"}
+        title="Other"
+        description="Coffee, Tea & More"
       />
     </div>
   );

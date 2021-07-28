@@ -13,6 +13,7 @@ import MeatCards from "./views/ProductPage/Meat/Meat";
 import MilkCards from "./views/ProductPage/Milk/Milk";
 import PoultryCards from "./views/ProductPage/Poultry/Poultry";
 import VegetableCards from "./views/ProductPage/Vegetables/Vegetables";
+import OtherCards from "./views/ProductPage/Other/Other";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -58,6 +59,9 @@ function App() {
         </Route>
         <Route path="/vegetable">
           <VegetableCards />
+        </Route>
+        <Route path="/other">
+          <OtherCards />
         </Route>
       </Route>
       <Route exact path="/">
