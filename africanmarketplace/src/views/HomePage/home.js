@@ -13,6 +13,8 @@ const MainBody = styled("div")({
 	flexDirection: "column",
 	margin: "0% auto",
 	padding: "0% auto",
+	fontFamily: "aria-label",
+	fontSize: "120%",
 });
 const FirstBody = styled("div")({
 	width: "100%",
@@ -64,6 +66,7 @@ const Title = styled("h1")({
 	textAlign: "center",
 	margin: "0% auto",
 	marginTop: "2%",
+	fontSize: "170%",
 });
 
 const Paragraph1 = styled("p")({
@@ -118,7 +121,7 @@ function Home() {
 							width={"500px"}
 						/>
 						<FirstBodyInfo>
-							<h3>About Us</h3>
+							<Title>About Us</Title>
 							<Paragraph2>
 								{" "}
 								Contrary to popular belief, Lorem Ipsum is not simply random
