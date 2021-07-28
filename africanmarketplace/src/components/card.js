@@ -45,8 +45,8 @@ function Cards() {
         description=""
       />
       <Card
-        img={"https://source.unsplash.com/1600x900/?cereal"}
-        title="Cereal"
+        img={"https://source.unsplash.com/1600x900/?grain"}
+        title="Grains"
         description=""
       />
     </div>

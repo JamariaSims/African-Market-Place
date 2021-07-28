@@ -1,44 +1,44 @@
-import "./Cereal.scss";
+import "./Grain.scss";
 import React from "react";
 
-function CerealCards() {
+function GrainCards() {
   return (
     <div className="wrapper">
-      <CerealCard
+      <GrainCard
         img={"https://source.unsplash.com/1600x900/?eggs"}
-        title="Maize Cereal"
+        title="Maize"
         description=""
       />
-      <CerealCard
+      <GrainCard
         img={"https://source.unsplash.com/1600x900/?milk,gallon"}
         title="Barley Cereal"
         description=""
       />
-      <CerealCard
+      <GrainCard
         img={"https://source.unsplash.com/1600x900/?milk,gallon"}
-        title="Barley Cereal"
+        title="Millet Cereal"
         description=""
       />
-      <CerealCard
+      <GrainCard
         img={"https://source.unsplash.com/1600x900/?milk,gallon"}
-        title="Barley Cereal"
+        title="Sorghum Cereal"
         description=""
       />
-      <CerealCard
+      <GrainCard
         img={"https://source.unsplash.com/1600x900/?milk,gallon"}
-        title="Barley Cereal"
+        title="Wheat Cereal"
         description=""
       />
-      <CerealCard
+      <GrainCard
         img={"https://source.unsplash.com/1600x900/?milk,gallon"}
-        title="Barley Cereal"
+        title="Rice Cereal"
         description=""
       />
     </div>
   );
 }
 
-function CerealCard(props) {
+function GrainCard(props) {
   return (
     <div className="card">
       <div className="cardBody">
@@ -51,4 +51,4 @@ function CerealCard(props) {
   );
 }
 
-export default CerealCards;
+export default GrainCards;

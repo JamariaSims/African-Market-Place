@@ -61,12 +61,15 @@ function Navbar() {
             </div>
           </div>
           <div className="cards">
-            <div className="tab1">All Products</div>
-            <div className="tab2">Animal Products</div>
-            <div className="tab3">Vegetables</div>
-            <div className="tab4">Fruits</div>
-            <div className="tab5">Roots&Tubers</div>
-            <div className="tab6">Others</div>
+            <div className="tab1">Eggs</div>
+            <div className="tab2">Milk</div>
+            <div className="tab3">Fish</div>
+            <div className="tab4">Honey</div>
+            <div className="tab5">Meat</div>
+            <div className="tab6">Poultry</div>
+            <div className="tab6">Vegetables</div>
+            <div className="tab6">Fruits</div>
+            <div className="tab6">Grains</div>
           </div>
         </nav>
       </div>

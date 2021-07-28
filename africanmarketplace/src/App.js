@@ -5,7 +5,7 @@ import Home from "./views/HomePage/home";
 import Navbar from "./views/navbar";
 import OwnerView from "./views/OwnerPage/OwnerView";
 import FishCards from "./views/ProductPage/Fish/Fish";
-import CerealCards from "./views/ProductPage/Cereal/Cereal";
+import GrainCards from "./views/ProductPage/Grains/Grain";
 import EggCards from "./views/ProductPage/Eggs/Eggs";
 import FruitCards from "./views/ProductPage/Fruits/Fruits";
 import HoneyCards from "./views/ProductPage/Honey/Honey";
@@ -35,8 +35,8 @@ function App() {
         <Route path="/fish">
           <FishCards />
         </Route>
-        <Route path="/cereal">
-          <CerealCards />
+        <Route path="/grain">
+          <GrainCards />
         </Route>
         <Route path="/eggs">
           <EggCards />
