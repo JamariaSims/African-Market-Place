@@ -1,9 +1,11 @@
 // import Navigation from "../components/Nav";
+
 import AddItem from "../../components/OwnerViewComponents/AddItem";
 import "../../components/OwnerViewComponents/Owner.scss";
 import "../../Card.scss";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ItemForm from "../../components/OwnerViewComponents/ItemForm";
 
 function OwnerView() {
   const ProductList = [
@@ -29,6 +31,10 @@ function OwnerView() {
     },
   ];
 
+  const [productListData, setProductListData] = useState(ProductList);
+
+  useEffect(() => {}, [productListData]);
+
   return (
     <div>
       <section className="itemContainer">
@@ -42,11 +48,16 @@ function OwnerView() {
         <button>Save Changes</button>
       </section>
       <section className="otherWrapper">
-        <h1>Products</h1>
-        <button>Add Product</button>
+        <p className="titleProducts">Products</p>
+      </section>
+      <section>
+        <ItemForm
+          setProductList={setProductListData}
+          productList={productListData}
+        />
       </section>
       <section className="otherWrapper2">
-        {ProductList.map((product) => (
+        {productListData.map((product) => (
           <AddItem
             img={product.image}
             title={product.title}

@@ -5,7 +5,7 @@ import Home from "./views/HomePage/home";
 import Navbar from "./components/navbar";
 import OwnerView from "./views/OwnerPage/OwnerView";
 import FishCards from "./views/ProductPage/Fish/Fish";
-import Layout from "./views/OwnerPage/owner";
+
 
 
 const firebaseConfig = {
@@ -32,9 +32,6 @@ function App() {
       </Route>
       <Route exact path="/">
         <Home />
-      </Route>
-      <Route path='/nope'>
-        <Layout/>
       </Route>
       <Route path="/user">
         <OwnerView />
