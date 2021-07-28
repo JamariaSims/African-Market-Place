@@ -5,10 +5,8 @@ import Home from "./views/HomePage/home";
 import OwnerView from "./views/OwnerPage/OwnerView";
 import Footer from "./components/footer";
 import LoginModal from "./components/LoginModal";
-import Navbar from "./components/navbar";
-import OwnerView from "./views/OwnerPage/OwnerView";
 import FishCards from "./views/ProductPage/Fish/Fish";
-import Layout from "./views/OwnerPage/owner";
+import Layout from "./views/OwnerPage/OwnerView";
 
 // Firebase Area //
 const firebaseConfig = {
@@ -36,26 +34,13 @@ function App() {
 			<Route path="/user">
 				<OwnerView />
 			</Route>
-			<Footer />
-		</Router>
-	);
-	return (
-		<Router>
-			<Route path="/">
-				<Navbar />
-				<Route path="/fish">
-					<FishCards />
-				</Route>
-			</Route>
-			<Route exact path="/">
-				<Home />
+			<Route path="/fish">
+				<FishCards />
 			</Route>
 			<Route path="/nope">
 				<Layout />
 			</Route>
-			<Route path="/user">
-				<OwnerView />
-			</Route>
+			<Footer />
 		</Router>
 	);
 }
