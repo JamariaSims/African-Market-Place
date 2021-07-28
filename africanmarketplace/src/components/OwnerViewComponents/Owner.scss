@@ -154,11 +154,24 @@ $radius: 0.2rem;
 
 .otherWrapper {
   display: flex;
-  flex-direction:column;
- //grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  gap: 2rem;
+  width: 100%;
+  padding-left: 2%;
+  padding-right:2%;
+  margin-top: 10%;
+  background-color: #BEE196;
+
+}
+
+.otherWrapper2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
   gap: 2rem;
   justify-content: center;
-  margin-top: 2%;
+  margin-top: 10%;
+  
 }
 
 // Card Styling //
@@ -166,16 +179,17 @@ $radius: 0.2rem;
   overflow: hidden;
   box-shadow: 0 2px 20px $clr-gray300;
   border-radius: $radius;
-  display: inline;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
   transition: transform 200ms ease-in;
+}
 
   // Image Sizing Styling //
   .itemImage {
     height: 15rem;
-    width: 30%;
+    width: 100%;
     object-fit: scale-down;
   }
 
@@ -189,6 +203,7 @@ $radius: 0.2rem;
   .itemDescription {
     padding: 0 1rem;
     font-size: 0.8rem;
+    
   }
 
   // Card Button Styling //
@@ -204,12 +219,12 @@ $radius: 0.2rem;
     border-radius: $radius;
     transition: background 200ms ease-in, color 200ms ease-in;
   }
-  &:hover {
-    transform: scale(1.02);
-  }
+  // &:hover {
+  //   transform: scale(1.02);
+  // }
 
-  &:hover .cardButton {
-    background: $clr-primary;
-    color: white;
-  }
-}
+  // &:hover .cardButton {
+  //   background: $clr-primary;
+  //   color: white;
+  // }
+

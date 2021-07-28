@@ -1,7 +1,14 @@
 import CategoryFilter from "./CategoryDropDown";
 //import ToggleSwitch from "./Switch";
-
-import React from "react";
+import "./Owner.scss";
+import "../../Card.scss";
+import { Container, IconButton, Typography } from "@material-ui/core";
+import React, { useEffect, useState } from "react";
+import { Grid } from "@material-ui/core";
+import Card from "@material-ui/core/Card";
+import CardHeader from "@material-ui/core/CardHeader";
+import CardContent from "@material-ui/core/CardContent";
+import { DeleteOutlined } from "@material-ui/icons";
 
 /*function ProductList() {
   return (
@@ -18,25 +25,35 @@ import React from "react";
   );
 }*/
 
-
-
-
-
-
 function AddItem(props) {
-
-
   return (
-    <div className="item">
+    <div className="card">
       {" "}
-      <div className="itemBody">
+      <Card id="trash" className="cardBody">
         {" "}
-        <img src={props.img} className="itemImage" alt="" />{" "}
-        <h2 className="itemName">{props.title}</h2>{" "}
-        <p className="itemPrice">{props.price}</p>{" "}
-        <p className="itemDescription">{props.description}</p>{" "}
-      </div>{" "}
-      <button className="itemButton">Save Changes</button>{" "}
+        <div
+          onClick={() => {
+            document.getElementById("trash").classList.toggle("hide");
+          }}
+        >
+          <CardHeader
+            action={
+              <IconButton>
+                {" "}
+                <DeleteOutlined />
+              </IconButton>
+            }
+          ></CardHeader>
+        </div>
+        <h2 className="cardTitle">{props.title}</h2>
+        <CardContent>
+          <img className="cardImage" src={props.img} alt="" />{" "}
+          <Typography>
+            <p className="cardDescription">{props.price}</p>{" "}
+            <p className="cardDescription">{props.description}</p>{" "}
+          </Typography>
+        </CardContent>
+      </Card>{" "}
     </div>
   );
 }

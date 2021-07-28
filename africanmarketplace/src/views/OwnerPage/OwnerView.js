@@ -1,6 +1,7 @@
 // import Navigation from "../components/Nav";
 import AddItem from "../../components/OwnerViewComponents/AddItem";
-import "./Owner.scss";
+import "../../components/OwnerViewComponents/Owner.scss";
+import "../../Card.scss";
 
 import React from "react";
 
@@ -29,9 +30,8 @@ function OwnerView() {
   ];
 
   return (
-    <div className='otherWrapper'>
-
-      <div>
+    <div>
+      <section className="itemContainer">
         <img src="africanmarketplace\src\assets\profile.png" />
         <label>Name</label>
         <input type="text"></input>
@@ -40,12 +40,12 @@ function OwnerView() {
         <label>Contact</label>
         <input type="number"></input>
         <button>Save Changes</button>
-      </div>
-      <div>
-        <h3>Products</h3>
+      </section>
+      <section className="otherWrapper">
+        <h1>Products</h1>
         <button>Add Product</button>
-      </div>
-      
+      </section>
+      <section className="otherWrapper2">
         {ProductList.map((product) => (
           <AddItem
             img={product.image}
@@ -53,11 +53,10 @@ function OwnerView() {
             price={product.price}
             description={product.description}
           />
-        ))};
-       
+        ))}
+      </section>
     </div>
   );
 }
 
 export default OwnerView;
-
