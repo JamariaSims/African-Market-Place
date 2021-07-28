@@ -1,12 +1,11 @@
-import "./App.css";
 import firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./views/HomePage/home";
-import OwnerView from "./views/OwnerPage/OwnerView";
+import Home from "./Views/HomePage/home";
+import OwnerView from "./Views/OwnerPage/OwnerView";
 import Footer from "./components/Modals/FooterBar";
 import LoginModal from "./components/Modals/LoginModal";
-import FishCards from "./views/ProductPage/Fish/Fish";
-import Layout from "./views/OwnerPage/OwnerView";
+import FishCards from "./Views/ProductPage/Fish/Fish";
+import Layout from "./Views/OwnerPage/OwnerView";
 
 // Firebase Area //
 const firebaseConfig = {

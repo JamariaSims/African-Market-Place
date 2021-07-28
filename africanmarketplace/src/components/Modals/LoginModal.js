@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SignIn, SignUp } from "./Auth/auth";
+import { SignIn, SignUp } from "../Authentication/Auth";
 import { alpha, makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
