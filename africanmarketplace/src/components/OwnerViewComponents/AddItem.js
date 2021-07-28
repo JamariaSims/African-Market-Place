@@ -19,46 +19,25 @@ import React from "react";
 }*/
 
 
-const ProductList = [
-	{
-		Image:"https://source.unsplash.com/1600x900/?milk,gallon",
-		title:'Eggs',
-		price:'3.99',
-		description:"Eggs that come from a chicken"
-	},
-
-	{
-		Image:"https://source.unsplash.com/1600x900/?milk,gallon",
-		title:'Milk',
-		price:'5.99',
-		description:"Milk that comes from a cow"
-	},
-
-	{
-		Image:"https://source.unsplash.com/1600x900/?milk,gallon",
-		title:'Almonds',
-		price:'10.99',
-		description:"Nuts that come from a tree"
-	},
-]
 
 
 
 
+function AddItem(props) {
 
-function addItem(props) {
+
   return (
     <div className="item">
       {" "}
       <div className="itemBody">
         {" "}
-        <img src={props.img} class="itemImage" alt="" />{" "}
+        <img src={props.img} className="itemImage" alt="" />{" "}
         <h2 className="itemName">{props.title}</h2>{" "}
         <p className="itemPrice">{props.price}</p>{" "}
         <p className="itemDescription">{props.description}</p>{" "}
       </div>{" "}
-      <button className="cardButton">Save Changes</button>{" "}
+      <button className="itemButton">Save Changes</button>{" "}
     </div>
   );
 }
-export default addItem;
+export default AddItem;

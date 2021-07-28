@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AuthLogin from "../components/authLogin";
+import AuthLogin from "./authLogin";
 import cart from "../assets/shoppingcart.png";
 import { Link } from "react-router-dom";
 import profile from "../assets/profile.png";

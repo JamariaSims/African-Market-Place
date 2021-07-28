@@ -109,11 +109,11 @@ margin: 0% auto;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-<<<<<<< HEAD
+
     box-shadow: #74865d 5px 5px 5px 5px;
-=======
+
     box-shadow: #74865d 5px 5px 5px 0px;
->>>>>>> 3f253e0cc7dffbd57af246b70ff809d0da97753c
+
 }
 .logout{
     position: relative;

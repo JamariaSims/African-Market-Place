@@ -2,7 +2,7 @@ import "./App.css";
 import firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./views/HomePage/home";
-import Navbar from "./views/navbar";
+import Navbar from "./components/navbar";
 import OwnerView from "./views/OwnerPage/OwnerView";
 
 const firebaseConfig = {
