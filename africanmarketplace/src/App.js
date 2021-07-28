@@ -4,6 +4,7 @@ import firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./views/HomePage/home";
 import OwnerView from "./views/OwnerPage/OwnerView";
+import Footer from "./components/footer";
 
 // Firebase Area //
 const firebaseConfig = {
@@ -40,6 +41,7 @@ function App() {
 			<Route path="/user">
 				<OwnerView />
 			</Route>
+			<Footer />
 		</Router>
 	);
 }
