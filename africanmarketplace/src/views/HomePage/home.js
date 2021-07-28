@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/navbar";
 import { styled } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import CardMaker from "../../components/CardMarker/CardMaker";
 
 const MainBody = styled("div")({
 	width: "100%",
@@ -75,6 +76,7 @@ const Paragraph2 = styled("p")({
 	marginTop: "3%",
 });
 
+const buttonList = ["Livestock", "Roots and Tubers", "Fruits", "Vegetables"];
 function Home(props) {
 	const { PageName, Tabs } = props;
 	console.log(Tabs);
@@ -126,10 +128,9 @@ function Home(props) {
 				</SecondBody>
 				<ThirdBody>
 					<h3>Our Products</h3>
-					<button>Livestock</button>
-					<button>Roots and Tubers</button>
-					<button>Fruits</button>
-					<button>Vegetables</button>
+					{buttonList.map((item) => ((
+						<CardMaker title={item} />
+	))
 				</ThirdBody>
 			</MainBody>
 		</>
