@@ -8,6 +8,7 @@ import LoginModal from "./components/LoginModal";
 import FishCards from "./views/ProductPage/Fish/Fish";
 import Layout from "./views/OwnerPage/OwnerView";
 
+
 // Firebase Area //
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -23,6 +24,7 @@ firebase.initializeApp(firebaseConfig);
 //
 
 function App() {
+
 	return (
 		<Router>
 			<Route path="/">

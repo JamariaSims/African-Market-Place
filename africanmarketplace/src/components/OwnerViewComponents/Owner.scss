@@ -154,13 +154,13 @@ $radius: 0.2rem;
 
 .otherWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
   gap: 2rem;
   width: 100%;
   padding-left: 2%;
   padding-right:2%;
-  margin-top: 10%;
+  margin-top: 5%;
   background-color: #BEE196;
 
 }
@@ -170,7 +170,7 @@ $radius: 0.2rem;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
   gap: 2rem;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 20%;
   
 }
 
@@ -218,6 +218,12 @@ $radius: 0.2rem;
     color: $clr-primary;
     border-radius: $radius;
     transition: background 200ms ease-in, color 200ms ease-in;
+  }
+
+  .titleProduct {
+    
+    font-size: xx-large;
+
   }
   // &:hover {
   //   transform: scale(1.02);
