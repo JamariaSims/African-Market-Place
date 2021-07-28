@@ -25,7 +25,7 @@ function Cards() {
 				description=""
 			/>
 			<Card
-				img={"https://source.unsplash.com/1600x900/?meat,filet"}
+				img={"https://source.unsplash.com/1600x900/?meat,steak,lambchop"}
 				title="Meat"
 				description=""
 			/>
@@ -42,6 +42,11 @@ function Cards() {
 			<Card
 				img={"https://source.unsplash.com/1600x900/?fruits"}
 				title="Fruits"
+				description=""
+			/>
+			<Card
+				img={"https://source.unsplash.com/1600x900/?cereal"}
+				title="Cereal"
 				description=""
 			/>
 		</div>

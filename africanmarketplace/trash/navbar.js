@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import AuthLogin from "../components/authLogin";
+import AuthLogin from "./authLogin";
 import cart from "../assets/shoppingcart.png";
 import { Link } from "react-router-dom";
 import profile from "../assets/profile.png";
 
-function Navbar() {
+function Navbar(props) {
+	const { PageName, Tabs } = props;
 	const [action, setAction] = useState("");
 	const [users, setUsers] = useState([]);
 	const [userData, setUserData] = useState({
@@ -25,7 +26,7 @@ function Navbar() {
 			<div className="home">
 				<nav>
 					<div className="searchBar">
-						<h1>Products</h1>
+						<h1>{PageName}</h1>
 						<div className="input">
 							<input type="text" />
 							<Link to="/cart">
@@ -61,11 +62,9 @@ function Navbar() {
 						</div>
 					</div>
 					<div className="cards">
-						<div className="tab1">All Products</div>
-						<div className="tab2">Animal Products</div>
-						<div className="tab3">Vegetables</div>
-						<div className="tab4">Fruits</div>
-						<div className="tab5">Roots&Tubers</div>
+						{Tabs.map((item) => (
+							<div>{item}</div>
+						))}
 						<div className="tab6">Others</div>
 					</div>
 				</nav>

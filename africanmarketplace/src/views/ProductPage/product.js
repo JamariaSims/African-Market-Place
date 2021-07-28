@@ -1,7 +1,11 @@
 import React from "react";
 
 function ProductPage() {
-	return <div></div>;
+  return (
+    <div>
+      <Cards />
+    </div>
+  );
 }
 
 export default ProductPage;
