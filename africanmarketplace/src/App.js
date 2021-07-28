@@ -3,11 +3,10 @@ import firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./views/HomePage/home";
 import OwnerView from "./views/OwnerPage/OwnerView";
-import Footer from "./components/Footer";
-import LoginModal from "./components/LoginModal";
+import Footer from "./components/Modals/FooterBar";
+import LoginModal from "./components/Modals/LoginModal";
 import FishCards from "./views/ProductPage/Fish/Fish";
 import Layout from "./views/OwnerPage/OwnerView";
-
 
 // Firebase Area //
 const firebaseConfig = {
@@ -24,7 +23,6 @@ firebase.initializeApp(firebaseConfig);
 //
 
 function App() {
-
 	return (
 		<Router>
 			<Route path="/">
