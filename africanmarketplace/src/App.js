@@ -1,18 +1,11 @@
 import "./App.css";
-import { useState } from "react";
 import firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./views/HomePage/home";
 import OwnerView from "./views/OwnerPage/OwnerView";
 import Footer from "./components/footer";
-import { styled } from "@material-ui/core/styles";
+import LoginModal from "./components/LoginModal";
 
-const Main = styled("div")({
-	display: "flex",
-	flexDirection: "column",
-	justifyContent: "space-between",
-	height: "100%",
-});
 // Firebase Area //
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -28,29 +21,18 @@ firebase.initializeApp(firebaseConfig);
 //
 
 function App() {
-	const [Page, setPage] = useState({
-		PageName: "Products",
-		Tabs: [
-			`All Products`,
-			"Animal Products",
-			"Vegetables",
-			"Fruits",
-			"Roots&Tubers",
-			"Others",
-		],
-	});
 	return (
 		<Router>
-			<Main>
-				<Route path="/"></Route>
-				<Route exact path="/">
-					<Home PageName={Page.PageName} Tabs={Page.Tabs} />
-				</Route>
-				<Route path="/user">
-					<OwnerView />
-				</Route>
-				<Footer />
-			</Main>
+			<Route path="/">
+				<LoginModal />
+			</Route>
+			<Route exact path="/">
+				<Home />
+			</Route>
+			<Route path="/user">
+				<OwnerView />
+			</Route>
+			<Footer />
 		</Router>
 	);
 }

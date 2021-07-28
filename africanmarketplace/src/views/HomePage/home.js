@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../../components/navbar";
 import { styled } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import CardMaker from "../../components/CardMarker/CardMaker";
+import NavigationBar from "../../components/NavigationBar";
 
 const Cards = styled("div")({
 	display: "flex",
@@ -82,12 +82,19 @@ const Paragraph2 = styled("p")({
 });
 
 const buttonList = ["Livestock", "Roots and Tubers", "Fruits", "Vegetables"];
-function Home(props) {
-	const { PageName, Tabs } = props;
-	console.log(Tabs);
+function Home() {
+	const Tabs = [
+		`All Products`,
+		"Animal Products",
+		"Vegetables",
+		"Fruits",
+		"Roots&Tubers",
+		"Others",
+	];
+
 	return (
 		<>
-			<Navbar PageName={PageName} Tabs={Tabs} />
+			<NavigationBar PageName={Home} Tabs={Tabs} />
 			<MainBody>
 				<FirstBody>
 					<FirstBodyInfo>
