@@ -4,6 +4,9 @@ import { styled } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import CardMaker from "../../components/CardMarker/CardMaker";
 
+const Cards = styled("div")({
+	display: "flex",
+});
 const MainBody = styled("div")({
 	width: "100%",
 	display: "flex",
@@ -50,6 +53,8 @@ const SecondBody = styled("div")({
 	flexDirection: "row",
 });
 const ThirdBody = styled("div")({
+	display: "flex",
+	flexDirection: "column",
 	width: "100%",
 	justifyContent: "space-between",
 	margin: "0% auto",
@@ -126,11 +131,14 @@ function Home(props) {
 						</FirstBodyInfo>
 					</SecondBodyInfo>
 				</SecondBody>
+
 				<ThirdBody>
-					<h3>Our Products</h3>
-					{buttonList.map((item) => ((
-						<CardMaker title={item} />
-	))
+					<Title>Our Products</Title>
+					<Cards>
+						{buttonList.map((item) => (
+							<CardMaker title={item} />
+						))}
+					</Cards>
 				</ThirdBody>
 			</MainBody>
 		</>

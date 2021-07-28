@@ -1,7 +1,7 @@
 import React from "react";
 import "./CardMaker.scss";
 function CardMaker(props) {
-	const { title, description } = props;
+	const { title } = props;
 	return (
 		<div className="cardHolder">
 			<div className="card">
