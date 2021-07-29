@@ -1,7 +1,13 @@
 import React from "react";
 
 function Consumer() {
-  return <div></div>;
+  return 
+  
+  <NavigationBar>
+    
+  </NavigationBar>;
+
+
 }
 
 export default Consumer;

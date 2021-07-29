@@ -1,0 +1,15 @@
+[{"Currency Values":"KES->UGX","Abbreviation":"KES","Countries":"Kenya"},
+    {"Currency Values":"KES->RWF","Abbreviation":"UGX","Countries":"Uganda"},
+    {"Currency Values":"KES->TZS","Abbreviation":"RWF","Countries":"Rwanda"},
+    {"Currency Values":"KES->CDF","Abbreviation":"TZS","Countries":"Tanzania"},
+    {"Currency Values":"KES->SSP","Abbreviation":"CDF","Countries":"DRC"},
+    {"Currency Values":"KES->BIF","Abbreviation":"SSP","Countries":"South Sudan"},
+    {"Currency Values":"UGX->RWF","Abbreviation":"BIF","Countries":"Burundi"},
+    {"Currency Values":"UGX->TZS"},{"Currency Values":"UGX->CDF"},
+    {"Currency Values":"UGX->SSP"},{"Currency Values":"UGX->BIF"},
+    {"Currency Values":"RWF->TZS"},{"Currency Values":"RWF->CDF"},
+    {"Currency Values":"RWF->SSP"},{"Currency Values":"RWF->BIF"},
+    {"Currency Values":"TZS->CDF"},{"Currency Values":"TZS->SSP"},
+    {"Currency Values":"TZS->BIF"},{"Currency Values":"CDF->SSP"},
+    {"Currency Values":"CDF->BIF"},{"Currency Values":"SSP->BIF"}
+]

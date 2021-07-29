@@ -7,6 +7,9 @@ import Footer from "./components/Footer";
 import LoginModal from "./components/LoginModal";
 import FishCards from "./views/ProductPage/Fish/Fish";
 import Layout from "./views/OwnerPage/OwnerView";
+import Contact from "./views/contact";
+import SearchBar from "./components/SearchBar";
+
 
 // Firebase Area //
 const firebaseConfig = {
@@ -39,6 +42,12 @@ function App() {
 			</Route>
 			<Route path="/nope">
 				<Layout />
+			</Route>
+			<Route path="/contact">
+				<Contact />
+			</Route>
+			<Route path="/searchbar">
+				<SearchBar />
 			</Route>
 			<Footer />
 		</Router>
