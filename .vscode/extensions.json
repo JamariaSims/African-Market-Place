@@ -1,6 +1,9 @@
 {
-    "recommendations": [
-        "ecmel.vscode-html-css",
-        "abusaidm.html-snippets"
-    ]
+  "recommendations": [
+    "ecmel.vscode-html-css",
+    "abusaidm.html-snippets",
+    "dbaeumer.vscode-eslint",
+    "felipecaputo.git-project-manager",
+    "davidanson.vscode-markdownlint"
+  ]
 }
