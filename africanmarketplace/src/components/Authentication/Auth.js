@@ -2,14 +2,13 @@ import firebase from "firebase";
 import WalledGarden from "../../Views/WalledGarden";
 require("firebase/auth");
 
-export function SignUp(userData, setUserData, test, setErrorLog) {
+export function SignUp(tempUser, setUserData, userData, setErrorLog) {
 	firebase
 		.auth()
-		.createUserWithEmailAndPassword(test.email, test.password)
+		.createUserWithEmailAndPassword(tempUser.email, tempUser.password)
 		.then(() => {
-			// setUserData(tempUser);
-			firebase.database().ref(`Emails/`).set({ test });
-			firebase.database().ref(`Users/`).set({ test });
+			setUserData(tempUser);
+			setUserData({ ...userData, ["SignUp"]: false });
 		})
 		.catch((error) => {
 			var errorMessage = error.message;
@@ -28,14 +27,4 @@ export function SignIn(tempUser, setErrorLog, setUserData) {
 			var errorMessage = error.message;
 			setErrorLog(errorMessage);
 		});
-}
-
-export function UserCheck(userData, setUserData, test, setErrorLog) {
-	var ref = firebase.database().ref();
-	ref.on("value", (snapshot) => {
-		const data = snapshot.val();
-		const { Users, Emails } = data;
-		console.log(`${Users}.${test.username}`);
-	});
-	// SignUp(userData, setUserData, test, setErrorLog);
 }
