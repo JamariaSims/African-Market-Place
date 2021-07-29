@@ -8,7 +8,10 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { styled } from "@material-ui/core/styles";
 import { Alert, AlertTitle } from "@material-ui/lab";
-function SignUpModal() {
+import { UserCheck, SignUp } from "../Authentication/Auth";
+function SignUpModal(props) {
+	const { userData, setUserData } = props;
+	const [errorLog, setErrorLog] = useState("");
 	var tempUser = {
 		email: "",
 		password: "",
@@ -27,6 +30,21 @@ function SignUpModal() {
 		e.preventDefault();
 		const { name, value } = e.target;
 		tempUser = { ...tempUser, [name]: value };
+		console.log(tempUser);
+	};
+	let test = {
+		username: "tehszrht212",
+		password: "tesht22ztdh122",
+		email: "notat1hezÔst@gmail.com",
+		Login: false,
+		SignUp: false,
+		Forgot: false,
+	};
+	const verifyInfo = (e) => {
+		e.preventDefault();
+		UserCheck(userData, setUserData, test, setErrorLog);
+		//Check to see if email/username used
+		//Check password vs comfirm password
 	};
 	return (
 		<div>
@@ -92,7 +110,7 @@ function SignUpModal() {
 							<Button variant="outlined" color="primary">
 								Cancel
 							</Button>
-							<Button variant="outlined" color="secondary">
+							<Button onClick={verifyInfo} variant="outlined" color="secondary">
 								Complete
 							</Button>
 						</DialogActions>

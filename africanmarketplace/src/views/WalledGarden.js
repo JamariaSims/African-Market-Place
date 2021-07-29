@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import LoginModal from "../components/Modals/LoginModal";
+import SignUpModal from "../components/Modals/SignUpModal";
 
 function WalledGarden(props) {
 	const { userData, setUserData } = props;
@@ -8,6 +9,9 @@ function WalledGarden(props) {
 		<div>
 			{!Login ? (
 				<LoginModal userData={userData} setUserData={setUserData} />
+			) : null}
+			{userData.SignUp ? (
+				<SignUpModal userData={userData} setUserData={setUserData} />
 			) : null}
 		</div>
 	);

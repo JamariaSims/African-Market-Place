@@ -40,11 +40,11 @@ export default function LoginModal(props) {
 		e.preventDefault();
 		const { name, value } = e.target;
 		tempUser = { ...tempUser, [name]: value };
+		return;
 	};
 	const onSubmit = (e) => {
 		e.preventDefault();
-		SignIn(tempUser, setErrorLog);
-		console.log(tempUser);
+		SignIn(tempUser, setErrorLog, setUserData);
 		return;
 	};
 
@@ -93,7 +93,14 @@ export default function LoginModal(props) {
 									<strong>{errorLog}</strong>
 								</Alert>
 							)}
-							<Button variant="contained">Sign Up</Button>
+							<Button
+								onClick={() => {
+									setUserData({ ...userData, ["SignUp"]: true });
+								}}
+								variant="contained"
+							>
+								Sign Up
+							</Button>
 							<Button variant="contained">Forgot?</Button>
 						</DialogContent>
 						<DialogActions>
