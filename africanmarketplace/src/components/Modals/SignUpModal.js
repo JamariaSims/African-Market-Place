@@ -32,19 +32,9 @@ function SignUpModal(props) {
 		tempUser = { ...tempUser, [name]: value };
 		console.log(tempUser);
 	};
-	let test = {
-		username: "tehszrht212",
-		password: "tesht22ztdh122",
-		email: "notat1hezÔst@gmail.com",
-		Login: false,
-		SignUp: false,
-		Forgot: false,
-	};
 	const verifyInfo = (e) => {
 		e.preventDefault();
-		UserCheck(userData, setUserData, test, setErrorLog);
-		//Check to see if email/username used
-		//Check password vs comfirm password
+		SignUp(tempUser, setUserData, userData, setErrorLog);
 	};
 	return (
 		<div>
@@ -81,30 +71,18 @@ function SignUpModal(props) {
 							<TextField
 								autoFocus
 								margin="dense"
-								name="username"
+								name="password"
 								type="text"
 								defaultValue=""
 								fullWidth
 							/>
-							<DialogContentText>Username</DialogContentText>
-							<TextField
-								autoFocus
-								margin="dense"
-								name="password"
-								type="password"
-								defaultValue=""
-								fullWidth
-							/>
 							<DialogContentText>Password</DialogContentText>
-							<TextField
-								autoFocus
-								margin="dense"
-								name="confirmPassword"
-								type="password"
-								defaultValue=""
-								fullWidth
-							/>
-							<DialogContentText>Confirm Password</DialogContentText>
+							{errorLog === "" ? null : (
+								<Alert severity="error">
+									<AlertTitle>Error</AlertTitle>
+									<strong>{errorLog}</strong>
+								</Alert>
+							)}
 						</DialogContent>
 						<DialogActions>
 							<Button variant="outlined" color="primary">
