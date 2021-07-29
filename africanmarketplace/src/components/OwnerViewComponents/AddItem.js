@@ -26,30 +26,26 @@ import { DeleteOutlined } from "@material-ui/icons";
 }*/
 
 function AddItem(props) {
+
+  
   return (
     <div className="card">
       {" "}
       <Card id="trash" className="cardBody">
         {" "}
-        <div
-          onClick={() => {
-            document.getElementById("trash").classList.toggle("hide");
-          }}
-        >
-          <CardHeader
-            action={
-              <IconButton>
-                {" "}
-                <DeleteOutlined />
-              </IconButton>
-            }
-          ></CardHeader>
-        </div>
-        <h2 className="cardTitle">{props.title}</h2>
+        <CardHeader
+          action={
+            <IconButton>
+              {" "}
+              <DeleteOutlined />
+            </IconButton>
+          }
+          title={props.title}
+          subheader={props.price}
+        />
         <CardContent>
           <img className="cardImage" src={props.img} alt="" />{" "}
           <Typography>
-            <p className="cardDescription">{props.price}</p>{" "}
             <p className="cardDescription">{props.description}</p>{" "}
           </Typography>
         </CardContent>

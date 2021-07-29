@@ -6,10 +6,12 @@ import "../../Card.scss";
 
 import React, { useState, useEffect } from "react";
 import ItemForm from "../../components/OwnerViewComponents/ItemForm";
+import SimpleDialogDemo from "../../components/OwnerViewComponents/FormDialog";
 
 function OwnerView() {
   const ProductList = [
     {
+      id:"",
       image: "https://source.unsplash.com/800x900/?eggs",
       title: "Eggs",
       price: "3.99",
@@ -17,6 +19,7 @@ function OwnerView() {
     },
 
     {
+      id:"",
       image: "https://source.unsplash.com/800x900/?milk",
       title: "Milk",
       price: "5.99",
@@ -24,6 +27,7 @@ function OwnerView() {
     },
 
     {
+      id:"",
       image: "https://source.unsplash.com/800x900/?almonds",
       title: "Almonds",
       price: "10.99",
@@ -35,17 +39,15 @@ function OwnerView() {
 
   useEffect(() => {}, [productListData]);
 
+  
+
+
+
   return (
     <div>
       <section className="itemContainer">
         <img src="africanmarketplace\src\assets\profile.png" />
-        <label>Name</label>
-        <input type="text"></input>
-        <label>Location</label>
-        <input type="text"></input>
-        <label>Contact</label>
-        <input type="number"></input>
-        <button>Save Changes</button>
+        <SimpleDialogDemo/>
       </section>
       <section className="otherWrapper">
         <p className="titleProducts">Products</p>

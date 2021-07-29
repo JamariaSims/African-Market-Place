@@ -31,7 +31,7 @@ const ItemForm = (props) => {
 
         const itemData = {
             title: enteredTitle,
-            amount: enteredPrice,
+            price: enteredPrice,
             description: enteredDescription,
             image: enteredImage
         };
