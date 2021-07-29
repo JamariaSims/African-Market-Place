@@ -9,6 +9,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import Button from "@material-ui/core/Button";
 import { styled } from "@material-ui/core/styles";
+import * as CoolIcons from "@material-ui/icons/";
 
 export default function NavigationBar(props) {
 	const { PageName, Tabs, userData } = props;
@@ -127,6 +128,11 @@ export default function NavigationBar(props) {
 							<IconButton edge="end" color="inherit">
 								<Typography href="/" variant="h6" className={classes.title}>
 									<LinkWithStyle href="/">{userData.email}</LinkWithStyle>
+									<Typography>
+										<LinkWithStyle>
+											<CoolIcons.ShoppingCart />
+										</LinkWithStyle>
+									</Typography>
 								</Typography>
 							</IconButton>
 						) : (
