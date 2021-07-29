@@ -3,6 +3,7 @@ import { styled } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import CardMaker from "../../components/CardMarker/CardMaker";
 import NavigationBar from "../../components/Modals/NavigationBar";
+import WalledGarden from "../WalledGarden";
 
 const Cards = styled("div")({
 	display: "flex",
@@ -85,7 +86,8 @@ const Paragraph2 = styled("p")({
 });
 
 const buttonList = ["Livestock", "Roots and Tubers", "Fruits", "Vegetables"];
-function Home() {
+function Home(props) {
+	const { userData, setUserData } = props;
 	const Tabs = [
 		`All Products`,
 		"Animal Products",
@@ -97,7 +99,8 @@ function Home() {
 
 	return (
 		<>
-			<NavigationBar PageName={Home} Tabs={Tabs} />
+			<WalledGarden userData={userData} setUserData={setUserData} />
+			<NavigationBar userData={userData} PageName={Home} Tabs={Tabs} />
 			<MainBody>
 				<FirstBody>
 					<FirstBodyInfo>

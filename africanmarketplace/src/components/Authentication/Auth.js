@@ -1,39 +1,41 @@
 import firebase from "firebase";
+import WalledGarden from "../../Views/WalledGarden";
 require("firebase/auth");
 
-//Sign Up
-function SignUp(Data, setData) {
-	const { email, password, username } = Data;
+export function SignUp(userData, setUserData, test, setErrorLog) {
 	firebase
 		.auth()
-		.createUserWithEmailAndPassword(email, password)
+		.createUserWithEmailAndPassword(test.email, test.password)
 		.then(() => {
-			firebase.database().ref(`${username}/}`).set(Data);
-			setData("SignedIn");
+			// setUserData(tempUser);
+			firebase.database().ref(`Emails/`).set({ test });
+			firebase.database().ref(`Users/`).set({ test });
 		})
 		.catch((error) => {
 			var errorMessage = error.message;
-			setData({ ...Data, ["errorCode"]: errorMessage });
+			setErrorLog(errorMessage);
 		});
 }
-/* -------------------------------------------------------------------------- */
-/*                                   Sign In                                  */
-/* -------------------------------------------------------------------------- */
-function SignIn(Data, setData) {
-	console.log(Data);
-	const { email, password } = Data;
-
+export function SignIn(tempUser, setErrorLog, setUserData) {
 	firebase
 		.auth()
-		.signInWithEmailAndPassword(email, password)
-		.then((res) => {
-			console.log(res);
-			document.getElementById("form").classList.toggle("hide");
-			setData({ ...Data, ["action"]: "LoggedIn" });
+		.signInWithEmailAndPassword(tempUser.email, tempUser.password)
+		.then(() => {
+			tempUser.Login = true;
+			setUserData(tempUser);
 		})
 		.catch((error) => {
 			var errorMessage = error.message;
-			setData({ ...Data, ["errorCode"]: errorMessage });
+			setErrorLog(errorMessage);
 		});
 }
-export { SignIn, SignUp };
+
+export function UserCheck(userData, setUserData, test, setErrorLog) {
+	var ref = firebase.database().ref();
+	ref.on("value", (snapshot) => {
+		const data = snapshot.val();
+		const { Users, Emails } = data;
+		console.log(`${Users}.${test.username}`);
+	});
+	// SignUp(userData, setUserData, test, setErrorLog);
+}

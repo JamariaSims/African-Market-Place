@@ -8,15 +8,13 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { styled } from "@material-ui/core/styles";
 import { Alert, AlertTitle } from "@material-ui/lab";
-import { SignIn } from "../Authentication/Auth";
-
-export default function LoginModal(props) {
+import { UserCheck, SignUp } from "../Authentication/Auth";
+function SignUpModal(props) {
 	const { userData, setUserData } = props;
 	const [errorLog, setErrorLog] = useState("");
-	const [active, setActive] = useState(true);
-
-	const menuToggle = () => {
-		active ? setActive(false) : setActive(true);
+	var tempUser = {
+		email: "",
+		password: "",
 	};
 	const Link = styled("a")({
 		textDecorationLine: "none",
@@ -28,36 +26,36 @@ export default function LoginModal(props) {
 		zIndex: "10",
 		right: "0",
 	});
-	var tempUser = {
-		username: "",
-		password: "",
-		email: "",
-		Login: false,
-		SignUp: false,
-		Forgot: false,
-	};
 	const onInputChange = (e) => {
 		e.preventDefault();
 		const { name, value } = e.target;
 		tempUser = { ...tempUser, [name]: value };
-		return;
+		console.log(tempUser);
 	};
-	const onSubmit = (e) => {
+	let test = {
+		username: "tehszrht212",
+		password: "tesht22ztdh122",
+		email: "notat1hezÔst@gmail.com",
+		Login: false,
+		SignUp: false,
+		Forgot: false,
+	};
+	const verifyInfo = (e) => {
 		e.preventDefault();
-		SignIn(tempUser, setErrorLog, setUserData);
-		return;
+		UserCheck(userData, setUserData, test, setErrorLog);
+		//Check to see if email/username used
+		//Check password vs comfirm password
 	};
-
 	return (
-		<>
+		<div>
 			<Auth>
 				<div>
 					<Dialog
-						open={active}
+						open={true}
 						aria-labelledby="form-dialog-title"
 						onChange={onInputChange}
 					>
-						<DialogTitle id="form-dialog-title">Login</DialogTitle>
+						<DialogTitle id="form-dialog-title">Sign Up</DialogTitle>
 						<DialogContent>
 							<DialogContentText>
 								By continuing, you agree to our
@@ -70,6 +68,7 @@ export default function LoginModal(props) {
 								</Link>
 								.
 							</DialogContentText>
+
 							<TextField
 								autoFocus
 								margin="dense"
@@ -77,7 +76,17 @@ export default function LoginModal(props) {
 								type="email"
 								fullWidth
 							/>
+
 							<DialogContentText>Email</DialogContentText>
+							<TextField
+								autoFocus
+								margin="dense"
+								name="username"
+								type="text"
+								defaultValue=""
+								fullWidth
+							/>
+							<DialogContentText>Username</DialogContentText>
 							<TextField
 								autoFocus
 								margin="dense"
@@ -87,33 +96,29 @@ export default function LoginModal(props) {
 								fullWidth
 							/>
 							<DialogContentText>Password</DialogContentText>
-							{errorLog === "" ? null : (
-								<Alert severity="error">
-									<AlertTitle>Error</AlertTitle>
-									<strong>{errorLog}</strong>
-								</Alert>
-							)}
-							<Button
-								onClick={() => {
-									setUserData({ ...userData, ["SignUp"]: true });
-								}}
-								variant="contained"
-							>
-								Sign Up
-							</Button>
-							<Button variant="contained">Forgot?</Button>
+							<TextField
+								autoFocus
+								margin="dense"
+								name="confirmPassword"
+								type="password"
+								defaultValue=""
+								fullWidth
+							/>
+							<DialogContentText>Confirm Password</DialogContentText>
 						</DialogContent>
 						<DialogActions>
-							<Button onClick={menuToggle} variant="outlined" color="primary">
+							<Button variant="outlined" color="primary">
 								Cancel
 							</Button>
-							<Button onClick={onSubmit} variant="outlined" color="secondary">
-								Enter
+							<Button onClick={verifyInfo} variant="outlined" color="secondary">
+								Complete
 							</Button>
 						</DialogActions>
 					</Dialog>
 				</div>
 			</Auth>
-		</>
+		</div>
 	);
 }
+
+export default SignUpModal;
