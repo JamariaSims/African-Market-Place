@@ -8,12 +8,14 @@ import InputBase from "@material-ui/core/InputBase";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import Button from "@material-ui/core/Button";
+import { styled } from "@material-ui/core/styles";
 
 export default function NavigationBar(props) {
-	const { PageName, Tabs } = props;
-	/* -------------------------------------------------------------------------- */
-	/*                                  For Styling                         										
-	/* -------------------------------------------------------------------------- */
+	const { PageName, Tabs, userData } = props;
+	const LinkWithStyle = styled("a")({
+		textDecorationLine: "none",
+		color: "white",
+	});
 	const useStyles = makeStyles((theme) => ({
 		root: {
 			"& > *": {
@@ -121,11 +123,19 @@ export default function NavigationBar(props) {
 					</div>
 					<div className={classes.grow} />
 					<div className={classes.sectionDesktop}>
-						<IconButton edge="end" color="inherit">
-							<Typography variant="h6" className={classes.title}>
-								{"Login"}
-							</Typography>
-						</IconButton>
+						{userData.email !== "" ? (
+							<IconButton edge="end" color="inherit">
+								<Typography href="/" variant="h6" className={classes.title}>
+									<LinkWithStyle href="/">{userData.email}</LinkWithStyle>
+								</Typography>
+							</IconButton>
+						) : (
+							<IconButton edge="end" color="inherit">
+								<Typography href="/" variant="h6" className={classes.title}>
+									<LinkWithStyle href="/">Login</LinkWithStyle>
+								</Typography>
+							</IconButton>
+						)}
 					</div>
 				</Toolbar>
 			</AppBar>

@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./Views/HomePage/home";
 import OwnerView from "./Views/OwnerPage/OwnerView";
 import Footer from "./components/Modals/FooterBar";
-import LoginModal from "./components/Modals/LoginModal";
 import FishCards from "./Views/ProductPage/Fish/Fish";
 import Layout from "./Views/OwnerPage/OwnerView";
-
+import { useState, useEffect } from "react";
 // Firebase Area //
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -22,13 +21,19 @@ firebase.initializeApp(firebaseConfig);
 //
 
 function App() {
+	const [userData, setUserData] = useState({
+		username: "",
+		password: "",
+		email: "",
+		Login: false,
+		SignUp: false,
+		Forgot: false,
+	});
+	useEffect(() => {}, [userData]);
 	return (
 		<Router>
-			<Route path="/">
-				<LoginModal />
-			</Route>
 			<Route exact path="/">
-				<Home />
+				<Home userData={userData} setUserData={setUserData} />
 			</Route>
 			<Route path="/user">
 				<OwnerView />

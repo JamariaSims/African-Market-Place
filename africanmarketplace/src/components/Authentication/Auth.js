@@ -1,39 +1,31 @@
 import firebase from "firebase";
+import WalledGarden from "../../Views/WalledGarden";
 require("firebase/auth");
 
-//Sign Up
-function SignUp(Data, setData) {
-	const { email, password, username } = Data;
+export function SignUp(userData, setUserData, tempUser) {
+	const { email, password } = tempUser;
 	firebase
 		.auth()
 		.createUserWithEmailAndPassword(email, password)
 		.then(() => {
-			firebase.database().ref(`${username}/}`).set(Data);
-			setData("SignedIn");
+			// firebase.database().ref(`${username}/}`).set(Data);
+			setUserData(tempUser);
+			console.log(userData);
 		})
 		.catch((error) => {
 			var errorMessage = error.message;
-			setData({ ...Data, ["errorCode"]: errorMessage });
 		});
 }
-/* -------------------------------------------------------------------------- */
-/*                                   Sign In                                  */
-/* -------------------------------------------------------------------------- */
-function SignIn(Data, setData) {
-	console.log(Data);
-	const { email, password } = Data;
-
+export function SignIn(props) {
+	const { tempUser, setErrorLog } = props;
 	firebase
 		.auth()
-		.signInWithEmailAndPassword(email, password)
-		.then((res) => {
-			console.log(res);
-			document.getElementById("form").classList.toggle("hide");
-			setData({ ...Data, ["action"]: "LoggedIn" });
+		.signInWithEmailAndPassword(tempUser.email, tempUser.password)
+		.then(() => {
+			return "Pass";
 		})
 		.catch((error) => {
 			var errorMessage = error.message;
-			setData({ ...Data, ["errorCode"]: errorMessage });
+			setErrorLog(errorMessage);
 		});
 }
-export { SignIn, SignUp };
