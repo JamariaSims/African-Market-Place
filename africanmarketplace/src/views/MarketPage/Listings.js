@@ -8,6 +8,9 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import * as CoolIcons from "@material-ui/icons/";
+import Avatar from '@material-ui/core/Avatar'
+import { AvatarGenerator } from 'random-avatar-generator';
+import { Autocomplete } from "@material-ui/lab";
 
 function Listings(props) {
 	const { userData, setUserData } = props;
@@ -20,9 +23,14 @@ function Listings(props) {
 			minWidth: 650,
 		},
 	});
-	function createData(Name, Category, VendorAmount, VendorPrice, VendorName) {
-		return { Name, Category, VendorAmount, VendorPrice, VendorName };
+	function createData(Name, Category, VendorAmount, VendorPrice, VendorName, VendorAvatar) {
+		return { Name, Category, VendorAmount, VendorPrice, VendorName, VendorAvatar};
 	}
+
+	const generator = new AvatarGenerator({
+	
+	});
+
 	const rows = [
 		createData("Maize ", "Cereals", 6, "24$", "Jamaria"),
 		createData("Cool Shirt", "Clothing & Shoes", 9, "37$", "JBars"),
@@ -46,6 +54,10 @@ function Listings(props) {
 						<TableCell align="right">Vendor Amount</TableCell>
 						<TableCell align="right">Vendor Price</TableCell>
 						<TableCell align="right">Vendor Name</TableCell>
+						
+						<TableCell align="right"></TableCell>
+
+						
 					</TableRow>
 				</TableHead>
 				<TableBody>
@@ -58,6 +70,8 @@ function Listings(props) {
 							<TableCell align="right">{row.VendorAmount}</TableCell>
 							<TableCell align="right">{row.VendorPrice}</TableCell>
 							<TableCell align="right">{row.VendorName}</TableCell>
+
+							<Avatar alt={row.VendorName} src= {generator.generateRandomAvatar()} />
 
 							<TableCell align="right">
 								<CoolIcons.AddCircleOutlineOutlined />

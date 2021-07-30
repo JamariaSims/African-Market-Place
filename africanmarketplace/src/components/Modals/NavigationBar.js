@@ -8,11 +8,11 @@ import InputBase from "@material-ui/core/InputBase";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import Button from "@material-ui/core/Button";
-import SearchBar2 from "./SearchBar2";
+import SearchBar2 from "../SearchBar2";
 import { styled } from "@material-ui/core/styles";
 import * as CoolIcons from "@material-ui/icons/";
 import { Link } from "react-router-dom";
-import MarketPage from "../../Views/MarketPage/MarketPage";
+import MarketPage from "../../views/MarketPage/MarketPage";
 
 export default function NavigationBar(props) {
 	const { PageName, Tabs, userData } = props;

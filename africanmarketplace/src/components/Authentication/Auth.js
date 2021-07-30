@@ -1,5 +1,4 @@
 import firebase from "firebase";
-import WalledGarden from "../../Views/WalledGarden";
 require("firebase/auth");
 
 export function SignUp(tempUser, setUserData, userData, setErrorLog) {

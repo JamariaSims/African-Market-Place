@@ -2,13 +2,12 @@ import firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./views/HomePage/home";
 import OwnerView from "./views/OwnerPage/OwnerView";
-import Footer from "./components/Footer";
 import FishCards from "./views/ProductPage/Fish/Fish";
 import Layout from "./views/OwnerPage/OwnerView";
 import SearchBar2 from "./components/SearchBar2";
 import Footer from "./components/Modals/FooterBar";
 import { useState, useEffect } from "react";
-import MarketPage from "./Views/MarketPage/MarketPage";
+import MarketPage from "./views/MarketPage/MarketPage";
 // Firebase Area //
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
