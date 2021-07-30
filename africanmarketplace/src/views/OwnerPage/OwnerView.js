@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import ItemForm from "..//../components/Owner/ItemForm";
-import AddItem from "..//../components/Owner/AddItem";
+import ItemForm from "../../components/Owner/ItemForm";
+import AddItem from "../../components/Owner/AddItem";
 import "..//../components/Owner/Owner.scss";
 import "../../Card.scss";
+import NavigationBar from "../../components/Modals/NavigationBar";
 
-function OwnerView() {
+function OwnerView(props) {
 	const ProductList = [
 		{
 			image: "https://source.unsplash.com/800x900/?eggs",
@@ -32,8 +33,12 @@ function OwnerView() {
 
 	useEffect(() => {}, [productListData]);
 
+	const { userData, setUserData } = props;
+	const Tabs = ["Home", "Owner Editor", "View Page"];
+
 	return (
 		<div>
+			<NavigationBar userData={userData} PageName={"Owner Page"} Tabs={Tabs} />
 			<section className="itemContainer">
 				<img src="africanmarketplace\src\assets\profile.png" />
 				<label>Name</label>

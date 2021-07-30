@@ -20,6 +20,10 @@ export default function LoginModal(props) {
 	};
 	const Link = styled("a")({
 		textDecorationLine: "none",
+		padding: "2%",
+	});
+	const LinkText = styled("a")({
+		textDecorationLine: "none",
 	});
 	const Auth = styled("div")({
 		width: "30%",
@@ -61,13 +65,13 @@ export default function LoginModal(props) {
 						<DialogContent>
 							<DialogContentText>
 								By continuing, you agree to our
-								<Link href="https://lambdaschool.com/sms-terms-and-conditions">
+								<LinkText href="https://lambdaschool.com/sms-terms-and-conditions">
 									{` User Agreement `}
-								</Link>
+								</LinkText>
 								and
-								<Link href="https://lambdaschool.com/sms-terms-and-conditions">
+								<LinkText href="https://lambdaschool.com/sms-terms-and-conditions">
 									{` Privacy Policy`}
-								</Link>
+								</LinkText>
 								.
 							</DialogContentText>
 							<TextField
@@ -96,12 +100,15 @@ export default function LoginModal(props) {
 							<Button
 								onClick={() => {
 									setUserData({ ...userData, ["SignUp"]: true });
+									setActive(false);
 								}}
 								variant="contained"
 							>
 								Sign Up
 							</Button>
-							<Button variant="contained">Forgot?</Button>
+							<Link href="/forgot" variant="contained">
+								Forgot?
+							</Link>
 						</DialogContent>
 						<DialogActions>
 							<Button onClick={menuToggle} variant="outlined" color="primary">

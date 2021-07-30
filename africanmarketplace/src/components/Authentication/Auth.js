@@ -1,5 +1,4 @@
 import firebase from "firebase";
-import WalledGarden from "../../Views/WalledGarden";
 require("firebase/auth");
 
 export function SignUp(tempUser, setUserData, userData, setErrorLog) {
@@ -7,8 +6,9 @@ export function SignUp(tempUser, setUserData, userData, setErrorLog) {
 		.auth()
 		.createUserWithEmailAndPassword(tempUser.email, tempUser.password)
 		.then(() => {
-			setUserData(tempUser);
 			setUserData({ ...userData, ["SignUp"]: false });
+			setUserData(tempUser);
+			setErrorLog("");
 		})
 		.catch((error) => {
 			var errorMessage = error.message;
