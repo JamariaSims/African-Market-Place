@@ -2,7 +2,7 @@ import React from "react";
 import Avatar from "react-avatar-edit";
 import { useState } from "react";
 
-function App() {
+function Avatar() {
   const [preview, setPreview] = useState(null);
   function onClose() {
     setPreview(null);
@@ -38,4 +38,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default Avatar;
