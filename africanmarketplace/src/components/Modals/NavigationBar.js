@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { alpha, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -8,6 +8,7 @@ import InputBase from "@material-ui/core/InputBase";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import Button from "@material-ui/core/Button";
+import SearchBar2 from "./SearchBar2";
 import { styled } from "@material-ui/core/styles";
 import * as CoolIcons from "@material-ui/icons/";
 import { Link } from "react-router-dom";
@@ -92,6 +93,7 @@ export default function NavigationBar(props) {
 	}));
 
 	const classes = useStyles();
+	const [searchTerm, setSearchTerm] = useState("");
 
 	/* -------------------------------------------------------------------------- */
 	/*                              Return Statement                              */
@@ -112,17 +114,8 @@ export default function NavigationBar(props) {
 						{PageName}
 					</Typography>
 					<div className={classes.search}>
-						<div className={classes.searchIcon}>
-							<SearchIcon />
-						</div>
-						<InputBase
-							placeholder="Search…"
-							classes={{
-								root: classes.inputRoot,
-								input: classes.inputInput,
-							}}
-							inputProps={{ "aria-label": "search" }}
-						/>
+						<div className={classes.searchIcon}>{/* <SearchIcon /> */}</div>
+						<SearchBar2 />
 					</div>
 					<div className={classes.grow} />
 					<div className={classes.sectionDesktop}>

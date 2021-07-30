@@ -1,10 +1,12 @@
 import firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./Views/HomePage/home";
-import OwnerView from "./Views/OwnerPage/OwnerView";
+import Home from "./views/HomePage/home";
+import OwnerView from "./views/OwnerPage/OwnerView";
+import Footer from "./components/Footer";
+import FishCards from "./views/ProductPage/Fish/Fish";
+import Layout from "./views/OwnerPage/OwnerView";
+import SearchBar2 from "./components/SearchBar2";
 import Footer from "./components/Modals/FooterBar";
-import FishCards from "./Views/ProductPage/Fish/Fish";
-import Layout from "./Views/OwnerPage/OwnerView";
 import { useState, useEffect } from "react";
 import MarketPage from "./Views/MarketPage/MarketPage";
 // Firebase Area //
@@ -19,8 +21,6 @@ const firebaseConfig = {
 	measurementId: "G-KED6X0V47R",
 };
 firebase.initializeApp(firebaseConfig);
-//
-
 function App() {
 	const [userData, setUserData] = useState({
 		username: "",
@@ -44,6 +44,9 @@ function App() {
 			</Route>
 			<Route path="/nope">
 				<Layout />
+			</Route>
+			<Route path="/searchbar2">
+				<SearchBar2 />
 			</Route>
 			<Route path="/MarketPage">
 				<MarketPage userData={userData} setUserData={setUserData} />
