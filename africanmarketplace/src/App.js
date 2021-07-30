@@ -1,14 +1,12 @@
-import "./App.css";
 import firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./views/HomePage/home";
 import OwnerView from "./views/OwnerPage/OwnerView";
-import Footer from "./components/footer.js";
-import LoginModal from "./components/LoginModal";
-import FishCards from "./views/ProductPage/Fish/Fish";
-import Layout from "./views/OwnerPage/OwnerView";
+import Footer from "./components/Modals/FooterBar";
+import { useState, useEffect } from "react";
+import MarketPage from "./views/MarketPage/MarketPage";
+import SearchBar2 from "./components/SearchBar2";
 
-// Firebase Area //
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
 	authDomain: "african-market-place.firebaseapp.com",
@@ -20,26 +18,34 @@ const firebaseConfig = {
 	measurementId: "G-KED6X0V47R",
 };
 firebase.initializeApp(firebaseConfig);
-//
-
 function App() {
+	const [userData, setUserData] = useState({
+		username: "",
+		password: "",
+		email: "",
+		Login: false,
+		SignUp: false,
+		Forgot: false,
+	});
+	useEffect(() => {}, [userData]);
 	return (
 		<Router>
-			<Route path="/">
-				<LoginModal />
-			</Route>
 			<Route exact path="/">
-				<Home />
+				<Home userData={userData} setUserData={setUserData} />
 			</Route>
 			<Route path="/user">
 				<OwnerView />
 			</Route>
-			<Route path="/fish">
-				<FishCards />
+			<Route path="/searchbar2">
+				<SearchBar2 />
 			</Route>
-			<Route path="/nope">
-				<Layout />
+			<Route path="/MarketPage">
+				<MarketPage userData={userData} setUserData={setUserData} />
 			</Route>
+			<Route path="/OwnerView">
+				<OwnerView userData={userData} setUserData={setUserData} />
+			</Route>
+
 			<Footer />
 		</Router>
 	);

@@ -1,8 +1,9 @@
-// import Navigation from "../components/Nav";
-
-import AddItem from "../../components/OwnerViewComponents/AddItem";
-import "../../components/OwnerViewComponents/Owner.scss";
+import React, { useState, useEffect } from "react";
+import ItemForm from "../../components/Owner/ItemForm";
+import AddItem from "../../components/Owner/AddItem";
+import "..//../components/Owner/Owner.scss";
 import "../../Card.scss";
+import NavigationBar from "../../components/Modals/NavigationBar";
 
 import React, { useState, useEffect } from "react";
 import ItemForm from "../../components/OwnerViewComponents/ItemForm";
@@ -39,17 +40,20 @@ function OwnerView() {
 	const [productListData, setProductListData] = useState(ProductList);
 
 	const [infoData, setInfoData] = useState([]);
+	const { userData, setUserData } = props;
+	const Tabs = ["Home", "Owner Editor", "View Page"];
 
 	return (
 		<div>
-			<section className="itemContainer">
-				<img src="africanmarketplace\src\assets\profile.png" />
+			<NavigationBar userData={userData} PageName={"Owner Page"} Tabs={Tabs} />
+				<section className="itemContainer">
+					<img src="africanmarketplace\src\assets\profile.png" />
 
-				<BuissnesInfo
+					<BuissnesInfo
 					name={infoData[0]}
 					location={infoData[1]}
 					contact={infoData[2]}
-				/>
+					/>
 
 				<SimpleDialogDemo infoData={infoData} setInfoData={setInfoData} />
 			</section>
