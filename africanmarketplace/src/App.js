@@ -6,6 +6,9 @@ import Footer from "./components/Modals/FooterBar";
 import { useState, useEffect } from "react";
 import MarketPage from "./views/MarketPage/MarketPage";
 import SearchBar2 from "./components/SearchBar2";
+import RootVeg from "./views/ProductPage/Vegetables/RootVeg/RootVeg";
+import Fruits from "./views/ProductPage/Fruits/Fruits";
+import Vegetables from "./views/ProductPage/Vegetables/Vegetables";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -45,7 +48,18 @@ function App() {
       <Route path="/OwnerView">
         <OwnerView userData={userData} setUserData={setUserData} />
       </Route>
-
+      <Route path="/Vegetables">
+        <Vegetables userData={userData} setUserData={setUserData} />
+      </Route>
+      <Route path="/Fruits">
+        <Fruits userData={userData} setUserData={setUserData} />
+      </Route>
+      <Route path="/RootVeg">
+        <RootVeg userData={userData} setUserData={setUserData} />
+      </Route>
+      {/* <Route path="/">
+        <OwnerView userData={userData} setUserData={setUserData} />
+      </Route> */}
       <Footer />
     </Router>
   );
