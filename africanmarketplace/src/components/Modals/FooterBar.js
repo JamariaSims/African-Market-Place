@@ -1,9 +1,6 @@
 import React from "react";
 import { styled } from "@material-ui/core/styles";
-import facebook from "../assets/fb.png";
-import google from "../assets/google.png";
-import ig from "../assets/ig.png";
-import twitter from "../assets/twitter.png";
+import ImageData from "../ImageData";
 
 const CoolFooter = styled("footer")({
 	width: "100%",
@@ -14,9 +11,8 @@ const CoolFooter = styled("footer")({
 	padding: "1%",
 	background: "#BEE196",
 });
-const CoolImg = styled("img")({
-	margin: "2%",
-	marginBottom: "0%",
+const ImageHolder = styled("div")({
+	margin: "0% auto",
 });
 const CoolA = styled("a")({
 	padding: "1%",
@@ -38,10 +34,22 @@ export default function Footer() {
 	return (
 		<CoolFooter>
 			<CoolDiv1>
-				<CoolImg width="30px" src={facebook} />
-				<CoolImg width="30px" src={google} />
-				<CoolImg width="30px" src={ig} />
-				<CoolImg width="30px" src={twitter} />
+				<ImageHolder>
+					{" "}
+					<ImageData imgName={"facebook"} />
+				</ImageHolder>
+				<ImageHolder>
+					{" "}
+					<ImageData imgName={"google"} />
+				</ImageHolder>
+				<ImageHolder>
+					{" "}
+					<ImageData imgName={"ig"} />
+				</ImageHolder>
+				<ImageHolder>
+					{" "}
+					<ImageData imgName={"twitter"} />
+				</ImageHolder>
 			</CoolDiv1>
 			<CoolDiv2>
 				<CoolA href="#">{`Sauti East Africa`}</CoolA>
