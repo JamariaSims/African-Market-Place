@@ -8,6 +8,14 @@ import MarketPage from "./views/MarketPage/MarketPage";
 import SearchBar2 from "./components/SearchBar2";
 import ForgotModal from "./components/Modals/ForgotModal";
 import Vegetables from "./views/ProductPage/Vegetables/Vegetables";
+import Poultry from "./views/ProductPage/Poultry/Poultry.js"
+import Milk from "./views/ProductPage/Milk/Milk.js"
+import Meat from "./views/ProductPage/Meat/Meat.js"
+import Honey from "./views/ProductPage/Honey/Honey.js"
+import Fruits from "./views/ProductPage/Fruits/Fruits.js"
+import Fish from "./views/ProductPage/Fish/Fish.js"
+import Eggs from "./views/ProductPage/Eggs/Eggs.js"
+import Cereal from "./views/ProductPage/Cereal/Cereal.js"
 
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -52,6 +60,30 @@ function App() {
 			</Route>
 			<Route path="/Vegetables">
 				<Vegetables userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Poultry">
+				<Poultry userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Milk">
+				<Milk userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Meat">
+				<Meat userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Honey">
+				<Honey userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Fruits">
+				<Fruits userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Fish">
+				<Fish userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Eggs">
+				<Eggs userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Cereal">
+				<Cereal userData={userData} setUserData={setUserData}/>
 			</Route>
 			<Footer />
 		</Router>
