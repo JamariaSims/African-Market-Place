@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import MarketPage from "./views/MarketPage/MarketPage";
 import SearchBar2 from "./components/SearchBar2";
 import ForgotModal from "./components/Modals/ForgotModal";
-import Products from "./views/ProductPage/Vegetables/Products";
+import Products from "./views/ProductPage/Products/Products";
 import Poultry from "./views/ProductPage/Poultry/Poultry.js"
 import Milk from "./views/ProductPage/Milk/Milk.js"
 import Meat from "./views/ProductPage/Meat/Meat.js"
