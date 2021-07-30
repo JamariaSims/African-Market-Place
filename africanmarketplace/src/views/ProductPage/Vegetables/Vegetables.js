@@ -15,12 +15,12 @@ function VegetableCards() {
         img={"https://source.unsplash.com/1600x900/?milk,gallon"}
         title="Milk"
         description=""
-        onClick="
+        onClick="location.href=`/Milk`"
       />
 
       <VegetableCard
-        img={"
-        https:title="Fish" //source.unsplash.com/1600x900/?fish,ocean"}
+        img={"https://source.unsplash.com/1600x900/?fish,ocean"}
+        title="Fish"
         description=""
       />
       <VegetableCard
