@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+
 import ItemForm from "../../components/Owner/ItemForm";
 import AddItem from "../../components/Owner/AddItem";
 import "..//../components/Owner/Owner.scss";
@@ -6,15 +6,16 @@ import "../../Card.scss";
 import NavigationBar from "../../components/Modals/NavigationBar";
 
 import React, { useState, useEffect } from "react";
-import ItemForm from "../../components/OwnerViewComponents/ItemForm";
-import SimpleDialogDemo from "../../components/OwnerViewComponents/FormDialog";
-import BuissnesInfo from "../../components/OwnerViewComponents/BuissnesInfo";
 
-function OwnerView() {
+import SimpleDialogDemo from "../../components/Owner/FormDialog";
+import BusinessInfo from "../../components/Owner/BusinessInfo";
+import { Container } from "@material-ui/core";
+
+function OwnerView(props) {
 	const ProductList = [
 		{
 			id: "",
-			image: "https://source.unsplash.com/800x900/?eggs",
+			vendor: "Chiggen",
 			title: "Eggs",
 			price: "3.99",
 			description: "Eggs that come from a chicken",
@@ -22,7 +23,7 @@ function OwnerView() {
 
 		{
 			id: "",
-			image: "https://source.unsplash.com/800x900/?milk",
+			vendor: "CowsR'us",
 			title: "Milk",
 			price: "5.99",
 			description: "Milk that comes from a cow",
@@ -30,7 +31,7 @@ function OwnerView() {
 
 		{
 			id: "",
-			image: "https://source.unsplash.com/800x900/?almonds",
+			vendor: "NutriBoi",
 			title: "Almonds",
 			price: "10.99",
 			description: "Nuts that come from a tree",
@@ -46,30 +47,29 @@ function OwnerView() {
 	return (
 		<div>
 			<NavigationBar userData={userData} PageName={"Owner Page"} Tabs={Tabs} />
-				<section className="itemContainer">
-					<img src="africanmarketplace\src\assets\profile.png" />
-
-					<BuissnesInfo
+				<Container>
+					<BusinessInfo
+					className="otherWrapper3"
 					name={infoData[0]}
 					location={infoData[1]}
 					contact={infoData[2]}
 					/>
 
 				<SimpleDialogDemo infoData={infoData} setInfoData={setInfoData} />
-			</section>
-			<section className="otherWrapper">
+			</Container>
+			<section className="otherWrapper ownerSection">
 				<p className="titleProducts">Products</p>
 			</section>
-			<section>
+			<section className="ownerSection">
 				<ItemForm
 					setProductList={setProductListData}
 					productList={productListData}
 				/>
 			</section>
-			<section className="otherWrapper2">
+			<section>
 				{productListData.map((product) => (
 					<AddItem
-						img={product.image}
+						vendor={product.vendor}
 						title={product.title}
 						price={product.price}
 						description={product.description}

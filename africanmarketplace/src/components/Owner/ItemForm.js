@@ -1,3 +1,4 @@
+import { Button, TextField } from '@material-ui/core';
 import React, {useState} from 'react';
 import './ItemForm.css';
 
@@ -8,7 +9,7 @@ const ItemForm = (props) => {
     const[enteredTitle, setEnteredTitle] = useState('');
     const[enteredPrice, setEnteredPrice] = useState('');
     const[enteredDescription, setEnteredDescription] = useState('');
-    const[enteredImage, setEnteredImage] = useState('')
+    const[enteredVendor, setEnteredVendor] = useState('')
 
     const titleChangeHandler = (event)=>{
         setEnteredTitle(event.target.value);
@@ -22,8 +23,8 @@ const ItemForm = (props) => {
         setEnteredDescription(event.target.value);
     };
 
-    const imageChangeHandler = (event)=>{
-        setEnteredImage(event.target.value);
+    const vendorChangeHandler = (event)=>{
+        setEnteredVendor(event.target.value);
     };
 
     const submitHandler = (event) => {
@@ -33,7 +34,7 @@ const ItemForm = (props) => {
             title: enteredTitle,
             price: enteredPrice,
             description: enteredDescription,
-            image: enteredImage
+            vendor: enteredVendor
         };
 
         setProductList([...productList,itemData]);
@@ -44,42 +45,49 @@ const ItemForm = (props) => {
         <form  className="sectionForm" onSubmit={submitHandler}>
             <div className="new-expense__controls">
                 <div className="new-expense__controls">
-                    <label>Title</label>
-                    <input 
-                     type='text'
-                     value={enteredTitle} 
-                     onChange={titleChangeHandler} 
-                    />
+                <TextField
+                    id="filled-helperText"
+                    label="Product Name"
+                    defaultValue="Product Name"
+                    variant="filled"
+                    value={enteredTitle} 
+                    onChange={titleChangeHandler} 
+                />
+                
                 </div>
                 <div className="new-expense__controls">
-                    <label>Price</label>
-                    <input 
-                     type='number' 
-                     min='0.01' 
-                     step='0.01'
-                     value={enteredPrice} 
-                     onChange={priceChangeHandler}
-                    />
+                <TextField
+                    id="filled-helperText"
+                    label="Price"
+                    defaultValue="Price"
+                    variant="filled"
+                    value={enteredPrice} 
+                    onChange={priceChangeHandler} 
+                />
                 </div>
                 <div className="new-expense__controls">
-                    <label>Description</label>
-                    <input 
-                     type='text' 
-                     value={enteredDescription}
-                     onChange={descriptionChangeHandler}
-                    />
+                <TextField
+                    id="filled-helperText"
+                    label="Description"
+                    defaultValue="Description"
+                    variant="filled"
+                    value={enteredDescription} 
+                    onChange={descriptionChangeHandler} 
+                />
                 <div className="new-expense__controls">
-                    <label>Image URL</label>
-                    <input 
-                     type='text'
-                     value={enteredImage} 
-                     onChange={imageChangeHandler} 
-                    />
+                <TextField
+                    id="filled-helperText"
+                    label="Vendor"
+                    defaultValue="Vendor"
+                    variant="filled"
+                    value={enteredVendor} 
+                    onChange={vendorChangeHandler} 
+                />
                 </div>
                 </div>
             </div>
             <div className="new-expense__actions">
-                <button type="submit">Add Product</button>
+                <Button variant="outlined" color="primary" type="submit">Add Product</Button>
             </div>
         </form>
     );

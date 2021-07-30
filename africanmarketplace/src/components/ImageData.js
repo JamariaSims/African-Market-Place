@@ -1,7 +1,7 @@
-import facebook from "../Assets/fb.png";
-import google from "../Assets/google.png";
-import ig from "../Assets/ig.png";
-import twitter from "../Assets/twitter.png";
+import facebook from "../assets/fb.png";
+import google from "../assets/google.png";
+import ig from "../assets/ig.png";
+import twitter from "../assets/twitter.png";
 
 import React from "react";
 

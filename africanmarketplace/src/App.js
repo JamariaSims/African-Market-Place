@@ -33,9 +33,6 @@ function App() {
 			<Route exact path="/">
 				<Home userData={userData} setUserData={setUserData} />
 			</Route>
-			<Route path="/user">
-				<OwnerView />
-			</Route>
 			<Route path="/searchbar2">
 				<SearchBar2 />
 			</Route>
