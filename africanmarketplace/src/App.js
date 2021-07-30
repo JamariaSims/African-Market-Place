@@ -1,13 +1,12 @@
-import "./App.css";
 import firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./views/HomePage/home";
-import OwnerView from "./views/OwnerPage/OwnerView";
-import Footer from "./components/Footer";
-import LoginModal from "./components/LoginModal";
-import FishCards from "./views/ProductPage/Fish/Fish";
-import Layout from "./views/OwnerPage/OwnerView";
-
+import Home from "./Views/HomePage/home";
+import OwnerView from "./Views/OwnerPage/OwnerView";
+import Footer from "./components/Modals/FooterBar";
+import FishCards from "./Views/ProductPage/Fish/Fish";
+import Layout from "./Views/OwnerPage/OwnerView";
+import { useState, useEffect } from "react";
+import MarketPage from "./Views/MarketPage/MarketPage";
 // Firebase Area //
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -23,13 +22,19 @@ firebase.initializeApp(firebaseConfig);
 //
 
 function App() {
+	const [userData, setUserData] = useState({
+		username: "",
+		password: "",
+		email: "",
+		Login: false,
+		SignUp: false,
+		Forgot: false,
+	});
+	useEffect(() => {}, [userData]);
 	return (
 		<Router>
-			<Route path="/">
-				<LoginModal />
-			</Route>
 			<Route exact path="/">
-				<Home />
+				<Home userData={userData} setUserData={setUserData} />
 			</Route>
 			<Route path="/user">
 				<OwnerView />
@@ -39,6 +44,9 @@ function App() {
 			</Route>
 			<Route path="/nope">
 				<Layout />
+			</Route>
+			<Route path="/MarketPage">
+				<MarketPage userData={userData} setUserData={setUserData} />
 			</Route>
 			<Footer />
 		</Router>
