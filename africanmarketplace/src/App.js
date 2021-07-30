@@ -1,4 +1,4 @@
-import firebase from "firebase/App";
+import firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./views/HomePage/Home";
 import OwnerView from "./views/OwnerPage/OwnerView";
