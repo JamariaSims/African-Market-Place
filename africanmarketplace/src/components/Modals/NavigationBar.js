@@ -10,6 +10,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import Button from "@material-ui/core/Button";
 import { styled } from "@material-ui/core/styles";
 import * as CoolIcons from "@material-ui/icons/";
+import { Link } from "react-router-dom";
+import MarketPage from "../../Views/MarketPage/MarketPage";
 
 export default function NavigationBar(props) {
 	const { PageName, Tabs, userData } = props;
@@ -146,13 +148,21 @@ export default function NavigationBar(props) {
 				</Toolbar>
 			</AppBar>
 			<Toolbar>
-				{Tabs.map((item) => (
-					<div>
-						<Button variant="contained" color="default">
-							{item}
-						</Button>
-					</div>
-				))}
+				{Tabs.map((item) =>
+					item === "All Products" ? (
+						<Link to={"/MarketPage"}>
+							<Button variant="contained" color="default">
+								{item}
+							</Button>
+						</Link>
+					) : (
+						<div>
+							<Button variant="contained" color="default">
+								{item}
+							</Button>
+						</div>
+					)
+				)}
 			</Toolbar>
 		</div>
 	);

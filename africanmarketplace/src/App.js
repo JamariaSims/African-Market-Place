@@ -6,7 +6,7 @@ import Footer from "./components/Modals/FooterBar";
 import FishCards from "./Views/ProductPage/Fish/Fish";
 import Layout from "./Views/OwnerPage/OwnerView";
 import { useState, useEffect } from "react";
-import MarketPage from "./Views/MarketPage";
+import MarketPage from "./Views/MarketPage/MarketPage";
 // Firebase Area //
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -34,8 +34,7 @@ function App() {
 	return (
 		<Router>
 			<Route exact path="/">
-				{/* <Home userData={userData} setUserData={setUserData} /> */}
-				<MarketPage />
+				<Home userData={userData} setUserData={setUserData} />
 			</Route>
 			<Route path="/user">
 				<OwnerView />
@@ -45,6 +44,9 @@ function App() {
 			</Route>
 			<Route path="/nope">
 				<Layout />
+			</Route>
+			<Route path="/MarketPage">
+				<MarketPage userData={userData} setUserData={setUserData} />
 			</Route>
 			<Footer />
 		</Router>
