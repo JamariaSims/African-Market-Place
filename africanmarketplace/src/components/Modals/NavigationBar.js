@@ -10,7 +10,7 @@ import SearchBar2 from "../SearchBar2";
 import { styled } from "@material-ui/core/styles";
 import * as CoolIcons from "@material-ui/icons/";
 import { Link } from "react-router-dom";
-import OwnerView from "../../views/OwnerPage/OwnerView";
+import CustomizedSwitches from "../Switch";
 
 export default function NavigationBar(props) {
   const { PageName, Tabs, userData } = props;
@@ -146,8 +146,8 @@ export default function NavigationBar(props) {
                 {item}
               </Button>
             </Link>
-          ) : item === "Animal Products" ? (
-            <Link to={"/"}>
+          ) : item === "My Store" ? (
+            <Link to={"/OwnerView"}>
               <Button variant="contained" color="default">
                 {item}
               </Button>
@@ -165,7 +165,7 @@ export default function NavigationBar(props) {
               </Button>
             </Link>
           ) : item === "Roots & Tubers" ? (
-            <Link to={"/Root"}>
+            <Link to={"/RootVeg"}>
               <Button variant="contained" color="default">
                 {item}
               </Button>
@@ -176,6 +176,14 @@ export default function NavigationBar(props) {
                 {item}
               </Button>
             </Link>
+          ) : item === "Animal Products" ? (
+            <Link to={"/"}>
+              <Button variant="contained" color="default">
+                {item}
+              </Button>
+            </Link>
+          ) : item === "View Page" ? (
+            <CustomizedSwitches>View Page</CustomizedSwitches>
           ) : (
             <div>
               <Button variant="contained" color="default">
@@ -188,3 +196,4 @@ export default function NavigationBar(props) {
     </div>
   );
 }
+
