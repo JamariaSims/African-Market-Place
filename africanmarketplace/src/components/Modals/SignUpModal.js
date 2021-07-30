@@ -85,9 +85,8 @@ function SignUpModal(props) {
 							)}
 						</DialogContent>
 						<DialogActions>
-							<Button variant="outlined" color="primary">
-								Cancel
-							</Button>
+							<Link href="/">Cancel</Link>
+
 							<Button onClick={verifyInfo} variant="outlined" color="secondary">
 								Complete
 							</Button>
