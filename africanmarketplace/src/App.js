@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import MarketPage from "./views/MarketPage/MarketPage";
 import SearchBar2 from "./components/SearchBar2";
 import ForgotModal from "./components/Modals/ForgotModal";
-import Vegetables from "./views/ProductPage/Vegetables/Vegetables";
+import Products from "./views/ProductPage/Vegetables/Products";
 import Poultry from "./views/ProductPage/Poultry/Poultry.js"
 import Milk from "./views/ProductPage/Milk/Milk.js"
 import Meat from "./views/ProductPage/Meat/Meat.js"
@@ -58,8 +58,8 @@ function App() {
 			<Route path="/forgot">
 				<ForgotModal />
 			</Route>
-			<Route path="/Vegetables">
-				<Vegetables userData={userData} setUserData={setUserData}/>
+			<Route path="/Products">
+				<Products userData={userData} setUserData={setUserData}/>
 			</Route>
 			<Route path="/Poultry">
 				<Poultry userData={userData} setUserData={setUserData}/>
