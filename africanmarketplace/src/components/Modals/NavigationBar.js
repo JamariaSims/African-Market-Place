@@ -10,10 +10,11 @@ import SearchBar2 from "../SearchBar2";
 import { styled } from "@material-ui/core/styles";
 import * as CoolIcons from "@material-ui/icons/";
 import { Link } from "react-router-dom";
-import CustomizedSwitches from "../Switch";
+import CustomizedSwitches from "../../components/Owner/Switch";
 
 export default function NavigationBar(props) {
   const { PageName, Tabs, userData } = props;
+
   const LinkWithStyle = styled("a")({
     textDecorationLine: "none",
     color: "white",
@@ -21,7 +22,8 @@ export default function NavigationBar(props) {
   const useStyles = makeStyles((theme) => ({
     root: {
       "& > *": {
-        margin: theme.spacing(1),
+        padding: theme.spacing(1),
+        backgroundColor: "#BEE196",
       },
     },
     grow: {
@@ -98,7 +100,7 @@ export default function NavigationBar(props) {
   /* -------------------------------------------------------------------------- */
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar className={classes.root} position="static">
         <Toolbar>
           <IconButton
             edge="start"
@@ -196,4 +198,3 @@ export default function NavigationBar(props) {
     </div>
   );
 }
-
