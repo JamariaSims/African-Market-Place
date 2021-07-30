@@ -7,8 +7,14 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import * as CoolIcons from "@material-ui/icons/";
 
-function Listings() {
+function Listings(props) {
+	const { userData, setUserData } = props;
+	const addToCart = (e) => {
+		// setUserData({ ...userData, ["cart"]: "" });
+		console.log(e.target);
+	};
 	const useStyles = makeStyles({
 		table: {
 			minWidth: 650,
@@ -18,9 +24,9 @@ function Listings() {
 		return { Name, Category, VendorAmount, VendorPrice, VendorName };
 	}
 	const rows = [
-		createData("Maize ", "Cereals", 6, 24, "Jamaria"),
-		createData("Cool Shirt", "Clothing & Shoes", 9, 37, "JBars"),
-		createData("Cool Lip Gloss", "Cosmetics", 16, 24, "DavidS"),
+		createData("Maize ", "Cereals", 6, "24$", "Jamaria"),
+		createData("Cool Shirt", "Clothing & Shoes", 9, "37$", "JBars"),
+		createData("Cool Lip Gloss", "Cosmetics", 16, "24$", "DavidS"),
 		createData("Fresh Nile Perch", "Fish Products", 3.7, 67, "BrandonV"),
 		createData("Lime", "Fruits", 16, 49, "JBars"),
 		createData("Beans ", "Legumes", 6, 24, "Jamaria"),
@@ -52,6 +58,10 @@ function Listings() {
 							<TableCell align="right">{row.VendorAmount}</TableCell>
 							<TableCell align="right">{row.VendorPrice}</TableCell>
 							<TableCell align="right">{row.VendorName}</TableCell>
+
+							<TableCell align="right">
+								<CoolIcons.AddCircleOutlineOutlined />
+							</TableCell>
 						</TableRow>
 					))}
 				</TableBody>
