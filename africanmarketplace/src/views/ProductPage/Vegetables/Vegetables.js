@@ -1,4 +1,4 @@
-import "../Card.scss";
+import "../Vegetables/Vegetables.scss";
 import React from "react";
 
 function VegetableCards() {

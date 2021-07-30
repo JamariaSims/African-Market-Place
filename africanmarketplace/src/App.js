@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import MarketPage from "./views/MarketPage/MarketPage";
 import SearchBar2 from "./components/SearchBar2";
 import ForgotModal from "./components/Modals/ForgotModal";
+import Vegetables from "./views/ProductPage/Vegetables/Vegetables";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -46,6 +47,12 @@ function App() {
       <Route path="/OwnerView">
         <OwnerView userData={userData} setUserData={setUserData} />
       </Route>
+      <Route path="/Vegetables">
+        <Vegetables userData={userData} setUserData={setUserData} />
+      </Route>
+      {/* <Route path="/My Store">
+        <OwnerView userData={userData} setUserData={setUserData} />
+      </Route> */}
       <Route path="/forgot">
         <ForgotModal />
       </Route>

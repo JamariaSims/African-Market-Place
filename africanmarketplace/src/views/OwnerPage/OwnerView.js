@@ -6,70 +6,70 @@ import "../../Card.scss";
 import NavigationBar from "../../components/Modals/NavigationBar";
 
 function OwnerView(props) {
-	const ProductList = [
-		{
-			image: "https://source.unsplash.com/800x900/?eggs",
-			title: "Eggs",
-			price: "3.99",
-			description: "Eggs that come from a chicken",
-		},
+  const ProductList = [
+    {
+      image: "https://source.unsplash.com/800x900/?eggs",
+      title: "Eggs",
+      price: "3.99",
+      description: "Eggs that come from a chicken",
+    },
 
-		{
-			image: "https://source.unsplash.com/800x900/?milk",
-			title: "Milk",
-			price: "5.99",
-			description: "Milk that comes from a cow",
-		},
+    {
+      image: "https://source.unsplash.com/800x900/?milk",
+      title: "Milk",
+      price: "5.99",
+      description: "Milk that comes from a cow",
+    },
 
-		{
-			image: "https://source.unsplash.com/800x900/?almonds",
-			title: "Almonds",
-			price: "10.99",
-			description: "Nuts that come from a tree",
-		},
-	];
+    {
+      image: "https://source.unsplash.com/800x900/?almonds",
+      title: "Almonds",
+      price: "10.99",
+      description: "Nuts that come from a tree",
+    },
+  ];
 
-	const [productListData, setProductListData] = useState(ProductList);
+  const [productListData, setProductListData] = useState(ProductList);
 
-	useEffect(() => {}, [productListData]);
+  useEffect(() => {}, [productListData]);
 
-	const { userData, setUserData } = props;
-	const Tabs = ["Home", "Owner Editor", "View Page"];
+  const { userData, setUserData } = props;
+  const Tabs = ["Home", "Owner Editor", "View Page"];
 
-	return (
-		<div>
-			<NavigationBar userData={userData} PageName={"Owner Page"} Tabs={Tabs} />
-			<section className="itemContainer">
-				<img src="africanmarketplace\src\assets\profile.png" />
-				<label>Name</label>
-				<input type="text"></input>
-				<label>Location</label>
-				<input type="text"></input>
-				<label>Contact</label>
-				<input type="number"></input>
-				<button>Save Changes</button>
-			</section>
-			<section className="otherWrapper">
-				<p className="titleProducts">Products</p>
-			</section>
-			<section>
-				<ItemForm
-					setProductList={setProductListData}
-					productList={productListData}
-				/>
-			</section>
-			<section className="otherWrapper2">
-				{productListData.map((product) => (
-					<AddItem
-						img={product.image}
-						title={product.title}
-						price={product.price}
-						description={product.description}
-					/>
-				))}
-			</section>
-		</div>
-	);
+  return (
+    <div>
+      <NavigationBar userData={userData} PageName={"Owner Page"} Tabs={Tabs} />
+      <section className="itemContainer">
+        <img src="africanmarketplace\src\assets\profile.png" />
+        <label>Name</label>
+        <input type="text"></input>
+        <label>Location</label>
+        <input type="text"></input>
+        <label>Contact</label>
+        <input type="number"></input>
+        <button>Save Changes</button>
+      </section>
+      <section className="otherWrapper">
+        <p className="titleProducts">Products</p>
+      </section>
+      <section>
+        <ItemForm
+          setProductList={setProductListData}
+          productList={productListData}
+        />
+      </section>
+      <section className="otherWrapper2">
+        {productListData.map((product) => (
+          <AddItem
+            img={product.image}
+            title={product.title}
+            price={product.price}
+            description={product.description}
+          />
+        ))}
+      </section>
+    </div>
+  );
 }
 
 export default OwnerView;
