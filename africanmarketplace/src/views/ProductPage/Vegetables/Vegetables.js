@@ -10,17 +10,17 @@ function VegetableCards() {
         title="Eggs"
         description=""
       />
-      <Link to={"/Milk"} variant="contained" color="default">
-        <VegetableCard
-          img={"https://source.unsplash.com/1600x900/?milk,gallon"}
-          title="Milk"
-          description=""
-          button=""
-        />
-      </Link>
+
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?fish,ocean"}
-        title="Fish"
+        img={"https://source.unsplash.com/1600x900/?milk,gallon"}
+        title="Milk"
+        description=""
+        onClick="
+      />
+
+      <VegetableCard
+        img={"
+        https:title="Fish" //source.unsplash.com/1600x900/?fish,ocean"}
         description=""
       />
       <VegetableCard
