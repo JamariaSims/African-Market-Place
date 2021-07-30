@@ -42,7 +42,7 @@ function OwnerView(props) {
 
 	const [infoData, setInfoData] = useState([]);
 	const { userData, setUserData } = props;
-	const Tabs = ["Home", "Owner Editor", "View Page"];
+	const Tabs = ["Home", "View Page"];
 
 	return (
 		<div>
