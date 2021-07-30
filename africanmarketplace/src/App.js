@@ -6,6 +6,7 @@ import Footer from "./components/Modals/FooterBar";
 import { useState, useEffect } from "react";
 import MarketPage from "./views/MarketPage/MarketPage";
 import SearchBar2 from "./components/SearchBar2";
+import ForgotModal from "./components/Modals/ForgotModal";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -45,7 +46,9 @@ function App() {
       <Route path="/OwnerView">
         <OwnerView userData={userData} setUserData={setUserData} />
       </Route>
-
+      <Route path="/forgot">
+        <ForgotModal />
+      </Route>
       <Footer />
     </Router>
   );
