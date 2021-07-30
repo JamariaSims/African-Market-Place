@@ -146,8 +146,26 @@ export default function NavigationBar(props) {
                 {item}
               </Button>
             </Link>
-          ) : item === "My Store" ? (
-            <Link to={"/OwnerView"}>
+          ) : item === "Animal Products" ? (
+            <Link to={"/"}>
+              <Button variant="contained" color="default">
+                {item}
+              </Button>
+            </Link>
+          ) : item === "Vegetables" ? (
+            <Link to={"/Vegetables"}>
+              <Button variant="contained" color="default">
+                {item}
+              </Button>
+            </Link>
+          ) : item === "Fruits" ? (
+            <Link to={"/Fruits"}>
+              <Button variant="contained" color="default">
+                {item}
+              </Button>
+            </Link>
+          ) : item === "Roots & Tubers" ? (
+            <Link to={"/Root"}>
               <Button variant="contained" color="default">
                 {item}
               </Button>
