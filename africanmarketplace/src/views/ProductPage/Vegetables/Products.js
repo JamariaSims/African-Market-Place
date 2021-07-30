@@ -54,6 +54,7 @@ function VegetableCards() {
         img={Fruits}
         title="Fruits"
         description=""
+        onClick
       />
       <VegetableCard
         img={Grains}

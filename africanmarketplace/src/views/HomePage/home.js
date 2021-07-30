@@ -91,10 +91,8 @@ function Home(props) {
 	const Tabs = [
 		`All Products`,
 		"Animal Products",
-		"Vegetables",
-		"Fruits",
-		"Roots&Tubers",
-		"Others",
+		"Products",
+		"Owner Page",
 	];
 
 	return (

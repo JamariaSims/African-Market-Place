@@ -152,8 +152,8 @@ export default function NavigationBar(props) {
                 {item}
               </Button>
             </Link>
-          ) : item === "Vegetables" ? (
-            <Link to={"/Vegetables"}>
+          ) : item === "Products" ? (
+            <Link to={"/Products"}>
               <Button variant="contained" color="default">
                 {item}
               </Button>
