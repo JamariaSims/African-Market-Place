@@ -55,6 +55,7 @@ function Listings(props) {
     createData("Irish Tubers", "Fish Products", 3, 67, "DavidS"),
     createData("Onions", "Vegetables", 16, 49, "BrandonV"),
   ];
+
   const classes = useStyles();
   return (
     <TableContainer component={Paper}>

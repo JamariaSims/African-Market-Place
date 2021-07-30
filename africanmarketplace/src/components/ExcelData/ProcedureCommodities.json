@@ -1,0 +1,592 @@
+[
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Animal Products - Other",
+    "commodityproduct": "Eggs"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Animal Products - Other",
+    "commodityproduct": "Exotic Eggs"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Animal Products - Other",
+    "commodityproduct": "Local Eggs"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Animal Products - Other",
+    "commodityproduct": "Milk"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Animal Products - Other",
+    "commodityproduct": "Nile Perch"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Animal Products - Other",
+    "commodityproduct": "Processed Honey"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Animal Products - Other",
+    "commodityproduct": "Tilapia"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Animal Products - Other",
+    "commodityproduct": "Unprocessed Honey"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Livestock",
+    "commodityproduct": "Beef"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Livestock",
+    "commodityproduct": "Goat Meat"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Livestock",
+    "commodityproduct": "Pork"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Poultry",
+    "commodityproduct": "Exotic Chicken"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Poultry",
+    "commodityproduct": "Local Chicken"
+  },
+  {
+    "commoditycat": "Animal Products",
+    "Sub-Category": "Poultry",
+    "commodityproduct": "Turkey"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Agwedde Beans"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Beans"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Beans (K132)"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Beans Canadian"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Beans Mwitemania"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Beans Rosecoco"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Black Beans (Dolichos)"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Dolichos (Njahi)"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Green Gram"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Kidney Beans"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Mixed Beans"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Mwezi Moja"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Nambale Beans"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Old Beans"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Red Beans"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Soya Beans"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "White Beans"
+  },
+  {
+    "commoditycat": "Beans",
+    "Sub-Category": "Beans",
+    "commodityproduct": "Yellow Beans"
+  },
+  {
+    "commoditycat": "Cereals - Maize",
+    "Sub-Category": "Maize",
+    "commodityproduct": "Dry Maize"
+  },
+  {
+    "commoditycat": "Cereals - Maize",
+    "Sub-Category": "Maize",
+    "commodityproduct": "Green Maize"
+  },
+  {
+    "commoditycat": "Cereals - Maize",
+    "Sub-Category": "Maize",
+    "commodityproduct": "Maize"
+  },
+  {
+    "commoditycat": "Cereals - Maize",
+    "Sub-Category": "Maize",
+    "commodityproduct": "Maize Bran"
+  },
+  {
+    "commoditycat": "Cereals - Maize",
+    "Sub-Category": "Maize",
+    "commodityproduct": "Maize Flour"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Barley",
+    "commodityproduct": "Barley"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Millet",
+    "commodityproduct": "Bulrush Millet"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Millet",
+    "commodityproduct": "Finger Millet"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Millet",
+    "commodityproduct": "Millet Flour"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Millet",
+    "commodityproduct": "Millet Grain"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Millet",
+    "commodityproduct": "Pearl Millet"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Millet",
+    "commodityproduct": "White Millet"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Sorghum",
+    "commodityproduct": "Red Sorghum"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Sorghum",
+    "commodityproduct": "Sorghum"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Sorghum",
+    "commodityproduct": "Sorghum Flour"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Sorghum",
+    "commodityproduct": "Sorghum Grain"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Sorghum",
+    "commodityproduct": "White Sorghum"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Wheat",
+    "commodityproduct": "Wheat"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Wheat",
+    "commodityproduct": "Wheat Bran"
+  },
+  {
+    "commoditycat": "Cereals - Other",
+    "Sub-Category": "Wheat",
+    "commodityproduct": "Wheat Flour"
+  },
+  {
+    "commoditycat": "Cereals - Rice",
+    "Sub-Category": "Rice",
+    "commodityproduct": "Imported Rice"
+  },
+  {
+    "commoditycat": "Cereals - Rice",
+    "Sub-Category": "Rice",
+    "commodityproduct": "Kahama Rice"
+  },
+  {
+    "commoditycat": "Cereals - Rice",
+    "Sub-Category": "Rice",
+    "commodityproduct": "Kayiso Rice"
+  },
+  {
+    "commoditycat": "Cereals - Rice",
+    "Sub-Category": "Rice",
+    "commodityproduct": "Kilombero Rice"
+  },
+  {
+    "commoditycat": "Cereals - Rice",
+    "Sub-Category": "Rice",
+    "commodityproduct": "Mbeya Rice"
+  },
+  {
+    "commoditycat": "Cereals - Rice",
+    "Sub-Category": "Rice",
+    "commodityproduct": "Morogoro Rice"
+  },
+  {
+    "commoditycat": "Cereals - Rice",
+    "Sub-Category": "Rice",
+    "commodityproduct": "Paddy Rice"
+  },
+  {
+    "commoditycat": "Cereals - Rice",
+    "Sub-Category": "Rice",
+    "commodityproduct": "Rice"
+  },
+  {
+    "commoditycat": "Cereals - Rice",
+    "Sub-Category": "Rice",
+    "commodityproduct": "Rice Bran"
+  },
+  {
+    "commoditycat": "Cereals - Rice",
+    "Sub-Category": "Rice",
+    "commodityproduct": "Super Rice"
+  },
+  {
+    "commoditycat": "Cereals - Rice",
+    "Sub-Category": "Rice",
+    "commodityproduct": "Unprocessed/husked rice"
+  },
+  {
+    "commoditycat": "Cereals - Rice",
+    "Sub-Category": "Rice",
+    "commodityproduct": "Upland Rice"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Avocado",
+    "commodityproduct": "Avocado"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Bananas",
+    "commodityproduct": "Apple Bananas"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Bananas",
+    "commodityproduct": "Cavendish (Bogoya)"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Bananas",
+    "commodityproduct": "Cooking Bananas"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Bananas",
+    "commodityproduct": "Ripe Bananas"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Fruits",
+    "commodityproduct": "Passion Fruits"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Lemons",
+    "commodityproduct": "Lemons"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Limes",
+    "commodityproduct": "Limes"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Mangoes",
+    "commodityproduct": "Mangoes Local"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Mangoes",
+    "commodityproduct": "Mangoes Ngowe"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Oranges",
+    "commodityproduct": "Oranges"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Pawpaw",
+    "commodityproduct": "Pawpaw"
+  },
+  {
+    "commoditycat": "Fruits",
+    "Sub-Category": "Pineapples",
+    "commodityproduct": "Pineapples"
+  },
+  {
+    "commoditycat": "Other",
+    "Sub-Category": "Coffee",
+    "commodityproduct": "Coffee (Arabica)"
+  },
+  {
+    "commoditycat": "Other",
+    "Sub-Category": "Coffee",
+    "commodityproduct": "Coffee (Robusta)"
+  },
+  {
+    "commoditycat": "Other",
+    "Sub-Category": "Cotton",
+    "commodityproduct": "Unprocessed Cotton"
+  },
+  {
+    "commoditycat": "Other",
+    "Sub-Category": "Tea",
+    "commodityproduct": "Unprocessed Tea"
+  },
+  {
+    "commoditycat": "Other",
+    "Sub-Category": "Tobacco",
+    "commodityproduct": "Tobacco"
+  },
+  {
+    "commoditycat": "Other",
+    "Sub-Category": "Vanilla",
+    "commodityproduct": "Unprocessed Vanilla"
+  },
+  {
+    "commoditycat": "Peas",
+    "Sub-Category": "Peas",
+    "commodityproduct": "Chic Pea"
+  },
+  {
+    "commoditycat": "Peas",
+    "Sub-Category": "Peas",
+    "commodityproduct": "Cowpeas"
+  },
+  {
+    "commoditycat": "Peas",
+    "Sub-Category": "Peas",
+    "commodityproduct": "Dry Peas"
+  },
+  {
+    "commoditycat": "Peas",
+    "Sub-Category": "Peas",
+    "commodityproduct": "Fresh Peas"
+  },
+  {
+    "commoditycat": "Peas",
+    "Sub-Category": "Peas",
+    "commodityproduct": "Green Peas"
+  },
+  {
+    "commoditycat": "Peas",
+    "Sub-Category": "Peas",
+    "commodityproduct": "Peas"
+  },
+  {
+    "commoditycat": "Peas",
+    "Sub-Category": "Peas",
+    "commodityproduct": "Pigeon Peas"
+  },
+  {
+    "commoditycat": "Roots & Tubers",
+    "Sub-Category": "Cassava",
+    "commodityproduct": "Cassava Chips"
+  },
+  {
+    "commoditycat": "Roots & Tubers",
+    "Sub-Category": "Cassava",
+    "commodityproduct": "Cassava Flour"
+  },
+  {
+    "commoditycat": "Roots & Tubers",
+    "Sub-Category": "Cassava",
+    "commodityproduct": "Cassava Fresh"
+  },
+  {
+    "commoditycat": "Roots & Tubers",
+    "Sub-Category": "Cassava",
+    "commodityproduct": "Dry Fermented Cassava"
+  },
+  {
+    "commoditycat": "Roots & Tubers",
+    "Sub-Category": "Cassava",
+    "commodityproduct": "Sun Dried Cassava"
+  },
+  {
+    "commoditycat": "Roots & Tubers",
+    "Sub-Category": "Potatoes",
+    "commodityproduct": "Red Irish Potatoes"
+  },
+  {
+    "commoditycat": "Roots & Tubers",
+    "Sub-Category": "Potatoes",
+    "commodityproduct": "Round Potatoes"
+  },
+  {
+    "commoditycat": "Roots & Tubers",
+    "Sub-Category": "Potatoes",
+    "commodityproduct": "Sweet Potatoes"
+  },
+  {
+    "commoditycat": "Roots & Tubers",
+    "Sub-Category": "Potatoes",
+    "commodityproduct": "White Fleshed Sweet Potatoes"
+  },
+  {
+    "commoditycat": "Roots & Tubers",
+    "Sub-Category": "Potatoes",
+    "commodityproduct": "White Irish Potatoes"
+  },
+  {
+    "commoditycat": "Seeds & Nuts",
+    "Sub-Category": "Nuts",
+    "commodityproduct": "Ground Nuts"
+  },
+  {
+    "commoditycat": "Seeds & Nuts",
+    "Sub-Category": "Nuts",
+    "commodityproduct": "Groundnuts"
+  },
+  {
+    "commoditycat": "Seeds & Nuts",
+    "Sub-Category": "Simsim",
+    "commodityproduct": "Simsim"
+  },
+  {
+    "commoditycat": "Seeds & Nuts",
+    "Sub-Category": "Sunflowers",
+    "commodityproduct": "Sunflower Seed"
+  },
+  {
+    "commoditycat": "Seeds & Nuts",
+    "Sub-Category": "Sunflowers",
+    "commodityproduct": "Sunflower Seed Cake"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Brinjals",
+    "commodityproduct": "Brinjal/Eggplant"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Cabbages",
+    "commodityproduct": "Cabbages"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Capsicums",
+    "commodityproduct": "Capsicums"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Carrots",
+    "commodityproduct": "Carrots"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Cauliflower",
+    "commodityproduct": "Cauliflower"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Chillies",
+    "commodityproduct": "Chillies"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Cucumber",
+    "commodityproduct": "Cucumber"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Ginger",
+    "commodityproduct": "Ginger"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Kales",
+    "commodityproduct": "Kales"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Lettuce",
+    "commodityproduct": "Lettuce"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Onions",
+    "commodityproduct": "Onions Dry"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Onions",
+    "commodityproduct": "Spring Onions"
+  },
+  {
+    "commoditycat": "Vegetables",
+    "Sub-Category": "Tomatoes",
+    "commodityproduct": "Tomatoes"
+  }
+]

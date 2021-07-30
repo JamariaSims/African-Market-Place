@@ -1,5 +1,6 @@
 import "./Vegetables.scss";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function VegetableCards() {
   return (
@@ -9,11 +10,14 @@ function VegetableCards() {
         title="Eggs"
         description=""
       />
-      <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?milk,gallon"}
-        title="Milk"
-        description=""
-      />
+      <Link to={"/Milk"} variant="contained" color="default">
+        <VegetableCard
+          img={"https://source.unsplash.com/1600x900/?milk,gallon"}
+          title="Milk"
+          description=""
+          button=""
+        />
+      </Link>
       <VegetableCard
         img={"https://source.unsplash.com/1600x900/?fish,ocean"}
         title="Fish"
@@ -65,5 +69,4 @@ function VegetableCard(props) {
     </div>
   );
 }
-
 export default VegetableCards;

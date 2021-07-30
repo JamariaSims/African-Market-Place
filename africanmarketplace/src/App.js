@@ -6,7 +6,7 @@ import Footer from "./components/Modals/FooterBar";
 import { useState, useEffect } from "react";
 import MarketPage from "./views/MarketPage/MarketPage";
 import SearchBar2 from "./components/SearchBar2";
-import RootVeg from "./views/ProductPage/Vegetables/RootVeg/RootVeg";
+import Milk from "./views/ProductPage/Milk/Milk";
 import Fruits from "./views/ProductPage/Fruits/Fruits";
 import Vegetables from "./views/ProductPage/Vegetables/Vegetables";
 
@@ -54,8 +54,8 @@ function App() {
       <Route path="/Fruits">
         <Fruits userData={userData} setUserData={setUserData} />
       </Route>
-      <Route path="/RootVeg">
-        <RootVeg userData={userData} setUserData={setUserData} />
+      <Route path="/Milk">
+        <Milk userData={userData} setUserData={setUserData} />
       </Route>
       {/* <Route path="/">
         <OwnerView userData={userData} setUserData={setUserData} />
