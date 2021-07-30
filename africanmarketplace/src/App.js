@@ -42,6 +42,10 @@ function App() {
       <Route path="/MarketPage">
         <MarketPage userData={userData} setUserData={setUserData} />
       </Route>
+      <Route path="/OwnerView">
+        <OwnerView userData={userData} setUserData={setUserData} />
+      </Route>
+
       <Footer />
     </Router>
   );
