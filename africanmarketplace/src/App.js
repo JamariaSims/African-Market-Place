@@ -1,15 +1,12 @@
-import firebase from "firebase/app";
+import firebase from "firebase/App";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./views/HomePage/home";
-import OwnerView from "./views/OwnerPage/OwnerView";
-import Footer from "./components/Footer";
-import FishCards from "./views/ProductPage/Fish/Fish";
-import Layout from "./views/OwnerPage/OwnerView";
-import SearchBar2 from "./components/SearchBar2";
+import Home from "./Views/HomePage/Home";
+import OwnerView from "./Views/OwnerPage/OwnerView";
 import Footer from "./components/Modals/FooterBar";
 import { useState, useEffect } from "react";
 import MarketPage from "./Views/MarketPage/MarketPage";
-// Firebase Area //
+import SearchBar2 from "./components/SearchBar2";
+
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
 	authDomain: "african-market-place.firebaseapp.com",
@@ -38,12 +35,6 @@ function App() {
 			</Route>
 			<Route path="/user">
 				<OwnerView />
-			</Route>
-			<Route path="/fish">
-				<FishCards />
-			</Route>
-			<Route path="/nope">
-				<Layout />
 			</Route>
 			<Route path="/searchbar2">
 				<SearchBar2 />
