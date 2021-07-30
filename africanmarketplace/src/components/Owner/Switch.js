@@ -77,7 +77,6 @@ export default function CustomizedSwitches() {
             name="checkedB"
           />
         }
-        label="View Page"
       />
     </FormGroup>
   );

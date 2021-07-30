@@ -23,7 +23,7 @@ export default function NavigationBar(props) {
     root: {
       "& > *": {
         padding: theme.spacing(1),
-        backgroundColor: "#BEE196",
+        backgroundColor: "#556f44",
       },
     },
     grow: {
@@ -45,9 +45,10 @@ export default function NavigationBar(props) {
     search: {
       position: "relative",
       borderRadius: theme.shape.borderRadius,
-      backgroundColor: alpha(theme.palette.common.white, 0.15),
+      borderColor:"#767b91",
+      backgroundColor: "#FFFFFF",
       "&:hover": {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
+        backgroundColor:"#767b91",
       },
       marginRight: theme.spacing(2),
       marginLeft: 0,
@@ -184,9 +185,7 @@ export default function NavigationBar(props) {
                 {item}
               </Button>
             </Link>
-          ) : item === "View Page" ? (
-            <CustomizedSwitches>View Page</CustomizedSwitches>
-          ) : (
+          )  : (
             <div>
               <Button variant="contained" color="default">
                 {item}
