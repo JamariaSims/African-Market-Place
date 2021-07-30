@@ -7,11 +7,12 @@ import "../../Card.scss";
 import React, { useState, useEffect } from "react";
 import ItemForm from "../../components/OwnerViewComponents/ItemForm";
 import SimpleDialogDemo from "../../components/OwnerViewComponents/FormDialog";
+import BuissnesInfo from "../../components/OwnerViewComponents/BuissnesInfo";
 
 function OwnerView() {
   const ProductList = [
     {
-      id:"",
+      id: "",
       image: "https://source.unsplash.com/800x900/?eggs",
       title: "Eggs",
       price: "3.99",
@@ -19,7 +20,7 @@ function OwnerView() {
     },
 
     {
-      id:"",
+      id: "",
       image: "https://source.unsplash.com/800x900/?milk",
       title: "Milk",
       price: "5.99",
@@ -27,7 +28,7 @@ function OwnerView() {
     },
 
     {
-      id:"",
+      id: "",
       image: "https://source.unsplash.com/800x900/?almonds",
       title: "Almonds",
       price: "10.99",
@@ -37,17 +38,32 @@ function OwnerView() {
 
   const [productListData, setProductListData] = useState(ProductList);
 
-  useEffect(() => {}, [productListData]);
 
-  
-
-
+  const info = [
+    {
+      id:"",
+      name: "",
+      location: "",
+      contact: "",
+    },
+  ];
+  const [infoData, setInfoData] = useState(info);
 
   return (
     <div>
       <section className="itemContainer">
         <img src="africanmarketplace\src\assets\profile.png" />
-        <SimpleDialogDemo/>
+        <SimpleDialogDemo 
+        infoData={infoData} 
+        setInfoData={setInfoData} 
+        />
+        {infoData.map((inform) => (
+          <BuissnesInfo
+            name={inform.name}
+            location={inform.location}
+            contact={inform.contact}
+          />
+        ))}
       </section>
       <section className="otherWrapper">
         <p className="titleProducts">Products</p>

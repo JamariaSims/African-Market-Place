@@ -1,87 +1,120 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemText from '@material-ui/core/ListItemText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import PersonIcon from '@material-ui/icons/Person';
-import AddIcon from '@material-ui/icons/Add';
-import Typography from '@material-ui/core/Typography';
-import { blue } from '@material-ui/core/colors';
-import { Forum } from '@material-ui/icons';
+import React, { useEffect, useState } from "react";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
+import DialogActions from "@material-ui/core/DialogActions";
+import PropTypes from "prop-types";
+import Avatar from "@material-ui/core/Avatar";
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import ListItemText from "@material-ui/core/ListItemText";
+import PersonIcon from "@material-ui/icons/Person";
+import AddIcon from "@material-ui/icons/Add";
+import Typography from "@material-ui/core/Typography";
+import { DialogContent, DialogContentText } from "@material-ui/core";
 
-const info = "name:";
+import Dialog from "@material-ui/core/Dialog";
 
+import { makeStyles } from "@material-ui/core/styles";
 
-function SimpleDialog(props) {
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 
-  const { onClose, selectedValue, open } = props;
+import DialogTitle from "@material-ui/core/DialogTitle";
 
+function SimpleDialog(infoData, setInfoData, open, onClose) {
   const handleClose = () => {
-    onClose(selectedValue);
+    onClose();
   };
 
   const handleListItemSubmit = (event) => {
-  
-  };
-  
-  const handleListItemChange = (event) => {
-    
-    
+    event.preventDefault();
   };
 
+  //const { infoData, setInfoData } = props;
+  const [enteredBName, setEnteredBName] = useState("");
+  const [enteredLocal, setEnteredLocal] = useState("");
+  const [enteredContact, setEnteredContact] = useState("");
+
+  const nameChangeHandler = (event) => {
+    setEnteredBName(event.target.value);
+  };
+  const localChangeHandler = (event) => {
+    setEnteredLocal(event.target.value);
+  };
+  const contactChangeHandler = (event) => {
+    setEnteredContact(event.target.value);
+  };
+
+  const informationData = {
+    name: enteredBName,
+    location: enteredLocal,
+    contact: enteredContact,
+  };
+
+  setInfoData({ ...infoData, informationData });
+
   return (
-    <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+    <Dialog
+      onClose={handleClose}
+      aria-labelledby="simple-dialog-title"
+      open={open}
+    >
       <DialogTitle id="simple-dialog-title">Set backup account</DialogTitle>
-      <List >
+      <List>
         <ListItem>
           <label>Buisness Name </label>
-          <input type="text"
-          onChange={()=>{handleListItemChange()}}></input>
+          <input
+            type="text"
+            value={enteredBName}
+            onChange={nameChangeHandler}
+          ></input>
         </ListItem>
-        <ListItem> 
+        <ListItem>
           <label>Location </label>
-          <input type="text"></input>
+          <input
+            type="text"
+            value={enteredLocal}
+            onChange={localChangeHandler}
+          ></input>
         </ListItem>
         <ListItem>
           <label>Contact </label>
-          <input type="number"></input>
+          <input
+            type="number"
+            value={enteredContact}
+            onChange={contactChangeHandler}
+          ></input>
         </ListItem>
         <ListItem>
-          <button onSubmit={()=>{handleListItemSubmit()}}>Save Changes</button>
+          <button
+            type="submit"
+            onSubmit={() => {
+              handleListItemSubmit();
+            }}
+          >
+            Save Changes
+          </button>
         </ListItem>
       </List>
     </Dialog>
   );
 }
 
-SimpleDialog.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
-  //selectedValue: PropTypes.string.isRequired,
-};
-
-export default function SimpleDialogDemo() {
+export default function SimpleDialogDemo(props) {
+  const { infoData, setInfoData } = props;
   const [open, setOpen] = React.useState(false);
-  //const [selectedValue, setSelectedValue] = React.useState(info);
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = (value) => {
-    setOpen(false);
-    //setSelectedValue(value);
+  SimpleDialog.propTypes = {
+    onClose: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired,
   };
 
-  
+  const handleClose = (value) => {
+    setOpen(false);
+  };
 
   return (
     <div>
@@ -90,7 +123,7 @@ export default function SimpleDialogDemo() {
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Edit
       </Button>
-      <SimpleDialog open={open} onClose={handleClose} />
+      {SimpleDialog(infoData, setInfoData, open, onClose)}
     </div>
   );
 }
