@@ -1,10 +1,15 @@
-
 import ItemForm from "../../components/Owner/ItemForm";
 import AddItem from "../../components/Owner/AddItem";
 import "..//../components/Owner/Owner.scss";
 import "../../Card.scss";
 import NavigationBar from "../../components/Modals/NavigationBar";
-
+import {
+	TableBody,
+	TableCell,
+	TableHead,
+	TableRow,
+	Typography,
+} from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 
 import SimpleDialogDemo from "../../components/Owner/FormDialog";
@@ -47,13 +52,13 @@ function OwnerView(props) {
 	return (
 		<div>
 			<NavigationBar userData={userData} PageName={"Owner Page"} Tabs={Tabs} />
-				<Container>
-					<BusinessInfo
+			<Container>
+				<BusinessInfo
 					className="otherWrapper3"
 					name={infoData[0]}
 					location={infoData[1]}
 					contact={infoData[2]}
-					/>
+				/>
 
 				<SimpleDialogDemo infoData={infoData} setInfoData={setInfoData} />
 			</Container>
@@ -67,14 +72,19 @@ function OwnerView(props) {
 				/>
 			</section>
 			<section>
-				{productListData.map((product) => (
-					<AddItem
-						vendor={product.vendor}
-						title={product.title}
-						price={product.price}
-						description={product.description}
-					/>
-				))}
+				<TableCell>
+					{productListData.map((product) => (
+						<TableHead>
+							{" "}
+							<AddItem
+								vendor={product.vendor}
+								title={product.title}
+								price={product.price}
+								description={product.description}
+							/>
+						</TableHead>
+					))}
+				</TableCell>
 			</section>
 		</div>
 	);
