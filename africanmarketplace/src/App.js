@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./views/HomePage/home";
 import OwnerView from "./views/OwnerPage/OwnerView";
 import Footer from "./components/Modals/FooterBar";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import MarketPage from "./views/MarketPage/MarketPage";
 import SearchBar2 from "./components/SearchBar2";
 
