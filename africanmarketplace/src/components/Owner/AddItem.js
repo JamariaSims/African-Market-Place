@@ -23,8 +23,6 @@ import CardContent from "@material-ui/core/CardContent";
 import { DeleteOutlined } from "@material-ui/icons";
 import CustomizedSwitches from "./Switch";
 
-
-
 function AddItem(props) {
   const useStyles = makeStyles({
     table: {

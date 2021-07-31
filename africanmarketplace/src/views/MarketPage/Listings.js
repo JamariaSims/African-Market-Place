@@ -11,9 +11,11 @@ import * as CoolIcons from "@material-ui/icons/";
 import Avatar from "@material-ui/core/Avatar";
 import { AvatarGenerator } from "random-avatar-generator";
 import { Autocomplete } from "@material-ui/lab";
-
+import { uniqueNamesGenerator, names } from "unique-names-generator";
+import pCommodities from "../../components/ExcelData/pCommodities.json";
 function Listings(props) {
 	const { userData, setUserData } = props;
+	const [data, setData] = useState([]);
 	const addToCart = (e) => {
 		// setUserData({ ...userData, ["cart"]: "" });
 		console.log(e.target);
@@ -40,21 +42,30 @@ function Listings(props) {
 			VendorAvatar,
 		};
 	}
-
+	console.log(pCommodities[90]["commodityproduct"]);
 	const generator = new AvatarGenerator({});
+	const rows = [];
+	const test = () => {
+		for (let i = 0; i < 50; i++) {
+			const nameGen1 = uniqueNamesGenerator({
+				dictionaries: [names],
+			});
+			const nameGen2 = [pCommodities];
 
-	const rows = [
-		createData("Maize ", "Cereals", 6, "24$", "Jamaria"),
-		createData("Cool Shirt", "Clothing & Shoes", 9, "37$", "JBars"),
-		createData("Cool Lip Gloss", "Cosmetics", 16, "24$", "DavidS"),
-		createData("Fresh Nile Perch", "Fish Products", 3.7, 67, "BrandonV"),
-		createData("Lime", "Fruits", 16, 49, "JBars"),
-		createData("Beans ", "Legumes", 6, 24, "Jamaria"),
-		createData("Groundnuts", "Pulses", 9, 37, "DavidS"),
-		createData("Timber", "Timber", 16, 24, "Jamaria"),
-		createData("Irish Tubers", "Fish Products", 3, 67, "DavidS"),
-		createData("Onions", "Vegetables", 16, 49, "BrandonV"),
-	];
+			const numGen1 = Math.floor(Math.random() * 50);
+			const numGen2 = Math.floor(Math.random() * 50);
+			rows.push(
+				createData(
+					pCommodities[numGen2]["commodityproduct"],
+					pCommodities[numGen2]["commoditycat"],
+					numGen1,
+					`${numGen2}$`,
+					nameGen1
+				)
+			);
+		}
+	};
+	test();
 	const classes = useStyles();
 	return (
 		<TableContainer component={Paper}>

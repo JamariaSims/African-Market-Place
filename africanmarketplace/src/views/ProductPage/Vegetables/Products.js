@@ -1,51 +1,63 @@
-import "../Card.scss";
+import "../Vegetables/Vegetables.scss";
 import React from "react";
+import Eggs from '../../../assets/Images/eggs.jpg'
+import Fruits from '../../../assets/Images/fruits.jpg'
+import Grains from '../../../assets/Images/grains.webp'
+import Honey from '../../../assets/Images/honey.webp'
+import Milk from '../../../assets/Images/milk.jpg'
+import Poultry from '../../../assets/Images/poultry.webp'
+import Fish from '../../../assets/Images/salmon.jpg'
+import Steak from '../../../assets/Images/steak.jpg'
+import Vegetables from '../../../assets/Images/vegetables.jpg'
+
+
 
 function VegetableCards() {
   return (
     <div className="wrapper">
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?eggs"}
+        img={Eggs}
         title="Eggs"
         description=""
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?milk,gallon"}
+        img={Milk}
         title="Milk"
         description=""
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?fish,ocean"}
+        img={Fish}
         title="Fish"
         description=""
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?honey,hive"}
+        img={Honey}
         title="Honey"
         description=""
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?meat,steak,lambchop"}
+        img={Steak}
         title="Meat"
         description=""
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?poultry"}
+        img={Poultry}
         title="Poultry"
         description=""
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?vegetables"}
+        img={Vegetables}
         title="Vegetables"
         description=""
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?fruits"}
+        img={Fruits}
         title="Fruits"
         description=""
+        onClick
       />
       <VegetableCard
-        img={"https://source.unsplash.com/1600x900/?cereal"}
+        img={Grains}
         title="Cereal"
         description=""
       />

@@ -6,10 +6,22 @@ import Footer from "./components/Modals/FooterBar";
 import { useState, useEffect } from "react";
 import MarketPage from "./views/MarketPage/MarketPage";
 import SearchBar2 from "./components/SearchBar2";
+
 import Crudi from "./Crud/Crudi";
 import TutorialsList from "./Crud/OtherComponents/tutorials-list.component";
 import Tutorial from "./Crud/OtherComponents/tutorial.component";
 import AddTutorial from "./Crud/OtherComponents/add-tutorial.component";
+import ForgotModal from "./components/Modals/ForgotModal";
+import Products from "./views/ProductPage/Vegetables/Products";
+import Poultry from "./views/ProductPage/Poultry/Poultry.js"
+import Milk from "./views/ProductPage/Milk/Milk.js"
+import Meat from "./views/ProductPage/Meat/Meat.js"
+import Honey from "./views/ProductPage/Honey/Honey.js"
+import Fruits from "./views/ProductPage/Fruits/Fruits.js"
+import Fish from "./views/ProductPage/Fish/Fish.js"
+import Eggs from "./views/ProductPage/Eggs/Eggs.js"
+import Cereal from "./views/ProductPage/Cereal/Cereal.js"
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -23,6 +35,7 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 function App() {
+
   const [userData, setUserData] = useState({
     username: "",
     password: "",
@@ -31,33 +44,53 @@ function App() {
     SignUp: false,
     Forgot: false,
   });
-  useEffect(() => {}, [userData]);
-  return (
-    <Router>
-      <Route exact path="/">
-        <Home userData={userData} setUserData={setUserData} />
-      </Route>
-      <Route path="/searchbar2">
-        <SearchBar2 />
-      </Route>
-      <Route path="/MarketPage">
-        <MarketPage userData={userData} setUserData={setUserData} />
-      </Route>
-      <Route path="/OwnerView">
-        <OwnerView userData={userData} setUserData={setUserData} />
-      </Route>
-      <Route path="/CRUD">
-        <Crudi />
-        <Switch>
-          <Route exact path="/tutorials" component={TutorialsList} />
-          <Route exact path="/add" component={AddTutorial} />
-          <Route path="/tutorials/:id" component={Tutorial} />
-        </Switch>
-      </Route>
-
-      <Footer />
-    </Router>
-  );
+	return (
+		<Router>
+			<Route exact path="/">
+				<Home userData={userData} setUserData={setUserData} />
+			</Route>
+			<Route path="/searchbar2">
+				<SearchBar2 />
+			</Route>
+			<Route path="/MarketPage">
+				<MarketPage userData={userData} setUserData={setUserData} />
+			</Route>
+			<Route path="/OwnerView">
+				<OwnerView userData={userData} setUserData={setUserData} />
+			</Route>
+			<Route path="/forgot">
+				<ForgotModal />
+			</Route>
+			<Route path="/Products">
+				<Products userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Poultry">
+				<Poultry userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Milk">
+				<Milk userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Meat">
+				<Meat userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Honey">
+				<Honey userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Fruits">
+				<Fruits userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Fish">
+				<Fish userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Eggs">
+				<Eggs userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Route path="/Cereal">
+				<Cereal userData={userData} setUserData={setUserData}/>
+			</Route>
+			<Footer />
+		</Router>
+	);
 }
 
 export default App;

@@ -10,6 +10,7 @@ import SearchBar2 from "../SearchBar2";
 import { styled } from "@material-ui/core/styles";
 import * as CoolIcons from "@material-ui/icons/";
 import { Link } from "react-router-dom";
+
 import CustomizedSwitches from "../../components/Owner/Switch";
 
 export default function NavigationBar(props) {
@@ -93,8 +94,9 @@ export default function NavigationBar(props) {
     },
   }));
 
-  const classes = useStyles();
-  const [searchTerm, setSearchTerm] = useState("");
+
+	const classes = useStyles();
+	const [searchTerm, setSearchTerm] = useState("");
 
   /* -------------------------------------------------------------------------- */
   /*                              Return Statement                              */
@@ -196,4 +198,5 @@ export default function NavigationBar(props) {
       </Toolbar>
     </div>
   );
+
 }
