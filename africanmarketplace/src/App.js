@@ -13,37 +13,35 @@ import Tutorial from "./Crud/OtherComponents/tutorial.component";
 import AddTutorial from "./Crud/OtherComponents/add-tutorial.component";
 import ForgotModal from "./components/Modals/ForgotModal";
 import Products from "./views/ProductPage/Vegetables/Products";
-import Poultry from "./views/ProductPage/Poultry/Poultry.js"
-import Milk from "./views/ProductPage/Milk/Milk.js"
-import Meat from "./views/ProductPage/Meat/Meat.js"
-import Honey from "./views/ProductPage/Honey/Honey.js"
-import Fruits from "./views/ProductPage/Fruits/Fruits.js"
-import Fish from "./views/ProductPage/Fish/Fish.js"
-import Eggs from "./views/ProductPage/Eggs/Eggs.js"
-import Cereal from "./views/ProductPage/Cereal/Cereal.js"
-
+import Poultry from "./views/ProductPage/Poultry/Poultry.js";
+import Milk from "./views/ProductPage/Milk/Milk.js";
+import Meat from "./views/ProductPage/Meat/Meat.js";
+import Honey from "./views/ProductPage/Honey/Honey.js";
+import Fruits from "./views/ProductPage/Fruits/Fruits.js";
+import Fish from "./views/ProductPage/Fish/Fish.js";
+import Eggs from "./views/ProductPage/Eggs/Eggs.js";
+import Cereal from "./views/ProductPage/Cereal/Cereal.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
-  authDomain: "african-market-place.firebaseapp.com",
-  databaseURL: "https://african-market-place-default-rtdb.firebaseio.com",
-  projectId: "african-market-place",
-  storageBucket: "african-market-place.appspot.com",
-  messagingSenderId: "127459408307",
-  appId: "1:127459408307:web:b681ffacf04a56864533c6",
-  measurementId: "G-KED6X0V47R",
+	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
+	authDomain: "african-market-place.firebaseapp.com",
+	databaseURL: "https://african-market-place-default-rtdb.firebaseio.com",
+	projectId: "african-market-place",
+	storageBucket: "african-market-place.appspot.com",
+	messagingSenderId: "127459408307",
+	appId: "1:127459408307:web:b681ffacf04a56864533c6",
+	measurementId: "G-KED6X0V47R",
 };
 firebase.initializeApp(firebaseConfig);
 function App() {
-
-  const [userData, setUserData] = useState({
-    username: "",
-    password: "",
-    email: "",
-    Login: false,
-    SignUp: false,
-    Forgot: false,
-  });
+	const [userData, setUserData] = useState({
+		username: "",
+		password: "",
+		email: "",
+		Login: false,
+		SignUp: false,
+		Forgot: false,
+	});
 	return (
 		<Router>
 			<Route exact path="/">
@@ -62,31 +60,39 @@ function App() {
 				<ForgotModal />
 			</Route>
 			<Route path="/Products">
-				<Products userData={userData} setUserData={setUserData}/>
+				<Products userData={userData} setUserData={setUserData} />
 			</Route>
 			<Route path="/Poultry">
-				<Poultry userData={userData} setUserData={setUserData}/>
+				<Poultry userData={userData} setUserData={setUserData} />
 			</Route>
 			<Route path="/Milk">
-				<Milk userData={userData} setUserData={setUserData}/>
+				<Milk userData={userData} setUserData={setUserData} />
 			</Route>
 			<Route path="/Meat">
-				<Meat userData={userData} setUserData={setUserData}/>
+				<Meat userData={userData} setUserData={setUserData} />
 			</Route>
 			<Route path="/Honey">
-				<Honey userData={userData} setUserData={setUserData}/>
+				<Honey userData={userData} setUserData={setUserData} />
 			</Route>
 			<Route path="/Fruits">
-				<Fruits userData={userData} setUserData={setUserData}/>
+				<Fruits userData={userData} setUserData={setUserData} />
 			</Route>
 			<Route path="/Fish">
-				<Fish userData={userData} setUserData={setUserData}/>
+				<Fish userData={userData} setUserData={setUserData} />
 			</Route>
 			<Route path="/Eggs">
-				<Eggs userData={userData} setUserData={setUserData}/>
+				<Eggs userData={userData} setUserData={setUserData} />
 			</Route>
 			<Route path="/Cereal">
-				<Cereal userData={userData} setUserData={setUserData}/>
+				<Cereal userData={userData} setUserData={setUserData} />
+			</Route>
+			<Route path="/CRUD">
+				<Crudi />
+				<Switch>
+					<Route exact path="/tutorials" component={TutorialsList} />
+					<Route exact path="/add" component={AddTutorial} />
+					<Route path="/tutorials/:id" component={Tutorial} />
+				</Switch>
 			</Route>
 			<Footer />
 		</Router>
