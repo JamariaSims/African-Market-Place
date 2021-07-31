@@ -67,8 +67,9 @@ function ProductCards() {
         description=""
         onClick
       />
+      </div>
 
-{/* //       <ProductCards className="card">
+//        <ProductCards className="card">
 //       <div className="cardBody">
 //         <img src={Grains} class="cardImage" alt="" />
 //         <h2 className="cardTitle">Cereals</h2>
@@ -137,9 +138,7 @@ function ProductCards() {
 // <button className="cardButton" href='#'>View Products</button>
 // </div>
 
-// </ProductCards> */}
-
-</div> 
+// </ProductCards>
 
     
   );
