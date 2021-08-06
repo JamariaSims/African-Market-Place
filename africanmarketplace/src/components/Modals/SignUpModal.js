@@ -11,6 +11,7 @@ import { Alert, AlertTitle } from "@material-ui/lab";
 import { UserCheck, SignUp } from "../Authentication/Auth";
 function SignUpModal(props) {
 	const { userData, setUserData } = props;
+	const [active, setActive] = useState(false);
 	const [errorLog, setErrorLog] = useState("");
 	var tempUser = {
 		email: "",
@@ -41,7 +42,7 @@ function SignUpModal(props) {
 			<Auth>
 				<div>
 					<Dialog
-						open={true}
+						open={active}
 						aria-labelledby="form-dialog-title"
 						onChange={onInputChange}
 					>
@@ -85,7 +86,13 @@ function SignUpModal(props) {
 							)}
 						</DialogContent>
 						<DialogActions>
-							<Link href="/">Cancel</Link>
+							<Button
+								onClick={() => {
+									setActive(!active);
+								}}
+							>
+								Cancel
+							</Button>
 
 							<Button onClick={verifyInfo} variant="outlined" color="secondary">
 								Complete

@@ -1,19 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
+import CartModal from "../components/Modals/CartModal";
+import ForgotModal from "../components/Modals/ForgotModal";
 import LoginModal from "../components/Modals/LoginModal";
 import SignUpModal from "../components/Modals/SignUpModal";
+import CustomReducer from "../Hooks/useReducer";
+import MarketPage from "./MarketPage/MarketPage";
+// const onSignUp = () => {
+// 	setUserData({ ...userData, ["Login"]: false, ["SignUp"]: true });
+// };
+// const onLogOut = () => {};
+// const onForgot = () => {};
+function WalledGarden() {
+	const [user, dispatch] = CustomReducer();
 
-function WalledGarden(props) {
-	const { userData, setUserData } = props;
-	const { Login } = userData;
 	return (
-		<div>
-			{!Login ? (
-				<LoginModal userData={userData} setUserData={setUserData} />
-			) : null}
-			{userData.SignUp ? (
-				<SignUpModal userData={userData} setUserData={setUserData} />
-			) : null}
-		</div>
+		<>
+			<LoginModal />
+			<SignUpModal />
+			<ForgotModal />
+		</>
 	);
 }
 

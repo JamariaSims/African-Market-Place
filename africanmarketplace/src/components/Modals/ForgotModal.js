@@ -9,7 +9,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import { styled } from "@material-ui/core/styles";
 import { Alert, AlertTitle } from "@material-ui/lab";
 function ForgotModal() {
-	const [isActive, setIsActive] = useState(false);
+	const [active, setActive] = useState(true);
 	const Link = styled("a")({
 		textDecorationLine: "none",
 	});
@@ -20,21 +20,16 @@ function ForgotModal() {
 		zIndex: "10",
 		right: "0",
 	});
-	const onInputChange = (e) => {
-		e.preventDefault();
-	};
-	const error = (e) => {
-		e.preventDefault();
-		setIsActive(true);
-	};
 	return (
 		<div>
 			<Auth>
 				<div>
 					<Dialog
-						open={true}
+						open={active}
 						aria-labelledby="form-dialog-title"
-						onChange={onInputChange}
+						onChange={() => {
+							setActive(!active);
+						}}
 					>
 						<DialogTitle id="form-dialog-title">Forgot Your Login?</DialogTitle>
 						<DialogContent>
@@ -59,17 +54,18 @@ function ForgotModal() {
 								fullWidth
 							/>
 							<DialogContentText>Username</DialogContentText>
-							{isActive ? (
-								<Alert severity="info">
-									<strong>Sorry that department is close today!</strong>
-								</Alert>
-							) : null}
 						</DialogContent>
 						<DialogActions>
-							<Link href="/" variant="outlined" color="primary">
+							<Button
+								onClick={() => {
+									setActive(!active);
+								}}
+								variant="outlined"
+								color="primary"
+							>
 								Cancel
-							</Link>
-							<Button onClick={error} variant="outlined" color="secondary">
+							</Button>
+							<Button variant="outlined" color="secondary">
 								Complete
 							</Button>
 						</DialogActions>

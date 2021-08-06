@@ -4,7 +4,12 @@ import Listings from "./Listings";
 
 function MarketPage(props) {
 	const { userData, setUserData } = props;
-	const Tabs = ["Home", "My Store"];
+	let Tabs = [];
+	if (userData.Login) {
+		Tabs = ["Home", "My Store"];
+	} else {
+		Tabs = ["Home"];
+	}
 	return (
 		<>
 			<NavigationBar userData={userData} PageName={"Market Page"} Tabs={Tabs} />

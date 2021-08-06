@@ -32,14 +32,7 @@ export default function LoginModal(props) {
 		zIndex: "10",
 		right: "0",
 	});
-	var tempUser = {
-		username: "",
-		password: "",
-		email: "",
-		Login: false,
-		SignUp: false,
-		Forgot: false,
-	};
+	var tempUser = { ...userData };
 	const onInputChange = (e) => {
 		e.preventDefault();
 		const { name, value } = e.target;

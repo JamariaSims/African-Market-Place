@@ -13,12 +13,19 @@ import { AvatarGenerator } from "random-avatar-generator";
 import { Autocomplete } from "@material-ui/lab";
 import { uniqueNamesGenerator, names } from "unique-names-generator";
 import pCommodities from "../../components/ExcelData/pCommodities.json";
+import { SendData } from "../../components/Authentication/Auth";
 function Listings(props) {
 	const { userData, setUserData } = props;
 	const [data, setData] = useState([]);
+	var cart = [];
 	const addToCart = (e) => {
-		// setUserData({ ...userData, ["cart"]: "" });
-		console.log(e.target);
+		e.preventDefault();
+		let newItem = e.currentTarget.id;
+		cart.push(newItem);
+		console.log(`${newItem} added to cart`);
+		if (!userData["email"] === "") {
+			SendData(userData, cart);
+		}
 	};
 	const useStyles = makeStyles({
 		table: {
@@ -100,7 +107,10 @@ function Listings(props) {
 							</TableCell>
 
 							<TableCell align="right">
-								<CoolIcons.AddCircleOutlineOutlined />
+								<CoolIcons.AddCircleOutlineOutlined
+									id={row.Name}
+									onClick={addToCart}
+								/>
 							</TableCell>
 						</TableRow>
 					))}

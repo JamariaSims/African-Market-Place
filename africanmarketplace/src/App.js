@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./views/HomePage/home";
 import OwnerView from "./views/OwnerPage/OwnerView";
 import Footer from "./components/Modals/FooterBar";
-import { useState } from "react";
+import { useReducer } from "react";
 import MarketPage from "./views/MarketPage/MarketPage";
 import SearchBar2 from "./components/SearchBar2";
 
@@ -21,6 +21,8 @@ import Fruits from "./views/ProductPage/Fruits/Fruits.js";
 import Fish from "./views/ProductPage/Fish/Fish.js";
 import Eggs from "./views/ProductPage/Eggs/Eggs.js";
 import Cereal from "./views/ProductPage/Cereal/Cereal.js";
+import CustomReducer from "./Hooks/useReducer";
+import WalledGarden from "./views/WalledGarden";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyB2wyupUcSOEyvODy4QECjjxqHHZJShXvY",
@@ -34,57 +36,52 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 function App() {
-	const [userData, setUserData] = useState({
-		username: "",
-		password: "",
-		email: "",
-		Login: false,
-		SignUp: false,
-		Forgot: false,
-	});
 	return (
 		<Router>
+			<Route path="/test">
+				<WalledGarden />
+			</Route>
 			<Route exact path="/">
-				<Home userData={userData} setUserData={setUserData} />
+				<Home />
 			</Route>
 			<Route path="/searchbar2">
 				<SearchBar2 />
 			</Route>
 			<Route path="/MarketPage">
-				<MarketPage userData={userData} setUserData={setUserData} />
+				<MarketPage />
 			</Route>
 			<Route path="/OwnerView">
-				<OwnerView userData={userData} setUserData={setUserData} />
+				<OwnerView />
 			</Route>
 			<Route path="/forgot">
 				<ForgotModal />
 			</Route>
 			<Route path="/Products">
-				<Products userData={userData} setUserData={setUserData} />
+				<Products />
 			</Route>
 			<Route path="/Poultry">
-				<Poultry userData={userData} setUserData={setUserData} />
+				<Poultry />
 			</Route>
 			<Route path="/Milk">
-				<Milk userData={userData} setUserData={setUserData} />
+				<Milk />
 			</Route>
 			<Route path="/Meat">
-				<Meat userData={userData} setUserData={setUserData} />
+				<Meat />
 			</Route>
 			<Route path="/Honey">
-				<Honey userData={userData} setUserData={setUserData} />
+				<Honey />
 			</Route>
 			<Route path="/Fruits">
-				<Fruits userData={userData} setUserData={setUserData} />
+				<Fruits />
 			</Route>
 			<Route path="/Fish">
-				<Fish userData={userData} setUserData={setUserData} />
+				<Fish />
 			</Route>
 			<Route path="/Eggs">
-				<Eggs userData={userData} setUserData={setUserData} />
+				<Eggs />
 			</Route>
 			<Route path="/Cereal">
-				<Cereal userData={userData} setUserData={setUserData} />
+				<Cereal />
 			</Route>
 			<Route path="/CRUD">
 				<Crudi />

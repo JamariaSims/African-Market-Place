@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import { v4 as uuidv4 } from "uuid";
 require("firebase/auth");
 
 export function SignUp(tempUser, setUserData, userData, setErrorLog) {
@@ -21,10 +22,15 @@ export function SignIn(tempUser, setErrorLog, setUserData) {
 		.signInWithEmailAndPassword(tempUser.email, tempUser.password)
 		.then(() => {
 			tempUser.Login = true;
+			tempUser.Market = true;
 			setUserData(tempUser);
 		})
 		.catch((error) => {
 			var errorMessage = error.message;
 			setErrorLog(errorMessage);
 		});
+}
+
+export function SendData(userData, cart) {
+	firebase.database().ref(`${userData.email}/`).set({ cart });
 }
